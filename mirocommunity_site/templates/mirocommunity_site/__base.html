@@ -1,0 +1,85 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+	{% block meta %}
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="description" content="Miro Community is a video curation platform. It allows you to embed, organize and display videos already on the internet.">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+	{% endblock meta %}
+
+	<title>{% block title %}Miro Community{% endblock title %}</title>
+	
+	{% block styles %}
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}mirocommunity_site/stylesheets/screen.css" media="screen" />
+	{% endblock %}
+
+	{% block scripts %}
+		<script src="{{ STATIC_URL }}mirocommunity_site/js/modernizr-2.0.6.js"></script>
+		<script src="{{ STATIC_URL }}mirocommunity_site/js/jquery-1.7.2.min.js"></script>
+	{% endblock %}
+
+	{% block head %}
+	{% endblock %}
+	
+</head>
+<body class="{% block body_classes %}miro_community{% endblock %}">
+	
+	<div id="container">
+		
+		<header id="header">
+			<div class="container">
+				{% block header %}
+					{% include "mirocommunity_site/_site_header.html" %}
+				{% endblock %}
+			</div>
+		</header>
+		
+		<div id="main" role="main">
+			{% block pre_content %}
+			{% endblock %}
+			<div class="container">
+				{% block content %}
+				{% endblock %}
+			</div>
+		</div>
+		
+		<footer id="footer">
+			<div class="container">
+				{% include "mirocommunity_site/_site_footer.html" %}
+			</div>
+		</footer>
+		
+	</div>{# /#container #}
+	
+	{% if settings.GOOGLE_ANALYTICS_UA %}
+		<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ?
+		"https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost +
+		"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		try {
+		  var pageTracker = _gat._getTracker("{{ settings.GOOGLE_ANALYTICS_UA }}");
+		  {% if settings.GOOGLE_ANALYTICS_DOMAIN %}
+		  pageTracker._setDomainName(".{{ settings.GOOGLE_ANALYTICS_DOMAIN }}");
+		  {% endif %}
+		  pageTracker._trackPageview();
+		} catch(err) {}</script>
+	{% endif %}
+	
+	{% if "MSIE 6" in request.META.HTTP_USER_AGENT or "MSIE 7" in request.META.HTTP_USER_AGENT %}
+		{% if not "chromeframe" in request.META.HTTP_USER_AGENT %}
+			<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+			<script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+		{% endif %}
+	{% endif %}
+	
+</body>
+
+</html>

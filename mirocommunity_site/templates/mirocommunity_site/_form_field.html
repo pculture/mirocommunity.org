@@ -1,0 +1,11 @@
+<div class='field'>
+	<div class='field-label'>{{ field.label }}{% if field.help_text %} <span class='field-help-text'>{{ field.help_text }}</span>{% endif %}</div>
+	<div class='field-field'>
+		{{ prefield }}{{ field }}{{ postfield }}
+	</div>
+	{% if field.errors %}
+	<div class='field-errors'>
+		{{ form.errors }}
+	</div>
+	{% endif %}
+</div>
