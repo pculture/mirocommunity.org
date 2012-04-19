@@ -47,4 +47,6 @@ urlpatterns = patterns("",
         TemplateView.as_view(template_name='mirocommunity_site/faq.html')),
     url(r'^terms/$',
         TemplateView.as_view(template_name='mirocommunity_site/terms.html')),
+    url(r'^about/$',
+        TemplateView.as_view(template_name='mirocommunity_site/about.html')),
 )

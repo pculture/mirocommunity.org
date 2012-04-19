@@ -1,0 +1,53 @@
+{% extends "mirocommunity_site/__base.html" %}
+
+{% block content-wrap %}
+<div id="page-wrap">
+	<div class="top-shadow"></div>
+
+	<div id="page-inner-wrap">
+		{% block content %}
+		<div id="about-contents">
+			<h1 class="title-big-thin">Bring together video from across the web</h1>
+			<img class="alignright" src="{{ STATIC_URL }}mirocommunity_site/images/m.png" alt="image">
+			<h2>Miro Community in a Nutshell</h2>
+			<p>Most organizations don’t have a single outlet for videos, and with Miro Community that’s fine - you get the benefits of exposure on YouTube, iTunes U, and wherever else you publish, without needing to re-host centrally.</p>
+			<p>Miro Community gives you leverage: it’s a simple way to manage 10,000+ videos, no matter where they are hosted. You get a branded video portal that: is tailored to you, drives SEO directly to your site, and integrates with your existing web strategy.</p>
+
+			<img class="alignleft" src="{{ STATIC_URL }}mirocommunity_site/images/participation.png" alt="participation">
+			<h2>Background</h2>
+			<p>Miro Community began with a focus on building local video communities in a time when local news outlets were shrinking while more and more people and organizations turned to online video to present their grassroots experiences. With a generous grant from the Knight Foundation, the Participatory Culture Foundation set out to give any community a chance to provide a local portal to community video content. Along the way, Miro Community transformed into something much broader - a way for any community or organization to easily manage an ever increasing amount of relevant video and create focused spaces around their topic of interest.</p>
+
+			<div id="find-solution">
+				<h2 class="title-solution">Find the Miro Community Solution that’s right for you</h2>
+				<div id="hosted-site">
+					<h3><a href="#">Create a Hosted Site</a></h3>
+					<p>Designed to be easy for anyone to create and maintain, with our freemium hosted service you get up to 25,000 videos and never have to worry about handling updates or maintenance. No special servers needed - embed videos from across the web. A light-weight solution for those with limited branding needs or their own design team.</p>
+					<a href="#"><img class="create-your-site" src="{{ STATIC_URL }}mirocommunity_site/images/create-site-btn.png" alt="create your site"></a>
+				</div>
+				<div id="signup-enterprise">
+					<h3><a href="#">Sign Up for Enterprise</a></h3>
+					<p>We also offer enterprise services, where we’ll work with you to develop a branded custom theme for your site, provide a SLA, and even develop custom features as needed. This option includes unlimited videos. Enterprise sites are maintained on a private server to further protect against usage spikes, and are offered a private sandbox to test out updates and design changes.</p>
+					<a class="see-examples" href="#">See enterprise examples</a>
+					<a href="#"><img class="learn-more-btn" src="{{ STATIC_URL }}mirocommunity_site/images/learn-blue-btn.png" alt="contact us"></a>
+				</div>
+
+				<div id="host-instance">
+					<h3><a href="#">Host your own instance</a></h3>
+					<p>Miro Community is proudly free and open source software, provided under the AGPL3 license. You are welcome to download and install our code, available at our GitHub repo. You can even adapt it to fit your needs. This license is share-alike, meaning you must provide the source code for any adaptations you make (this does not apply to custom themes). You will likely need people familiar with Python in order to successfully install.</p>
+					<a href="#"><img class="host-btn" src="{{ STATIC_URL }}mirocommunity_site/images/host-black-btn.png" alt="host your own"></a>
+				</div>
+			</div>{# /#find-solution #}
+
+			<div class="border-line"></div>
+
+			<div id="pcf">
+				<img class="alignright" src="{{ STATIC_URL }}mirocommunity_site/images/pcf.png" alt="pcf">
+				<h3><a href="#">The Participatory Culture Foundation</a></h3>
+				<p>Miro Community is a project of the Participatory Culture Foundation (PCF), a 501c3 non-profit organization, which is dedicated to supporting a democratic media by creating open and decentralized video tools and services. We work to eliminate gatekeepers and empower communities around the world. Learn more at <a href="#">pculture.org</a></p>
+			</div>
+			
+		</div>{# /#about-contents #}
+		{% endblock %}
+	</div>{# /.page-inner-wrap #}
+</div>{# /#page-wrap #}
+{% endblock %}
