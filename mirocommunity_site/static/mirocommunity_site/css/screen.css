@@ -19,90 +19,72 @@ table {	border-collapse: collapse; border-spacing: 0; }
 /** Base Body Styles **/
 @font-face {
     font-family: 'HelveticaNeueRegular';
-    src: url('fonts/helveticaneue-light-webfont.eot');
-    src: url('fonts/helveticaneue-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/helveticaneue-light-webfont.woff') format('woff'),
-         url('fonts/helveticaneue-light-webfont.ttf') format('truetype'),
-         url('fonts/helveticaneue-light-webfont.svg#HelveticaNeueRegular') format('svg');
+    src: url('../fonts/helveticaneue-light-webfont.eot');
+    src: url('../fonts/helveticaneue-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helveticaneue-light-webfont.woff') format('woff'),
+         url('../fonts/helveticaneue-light-webfont.ttf') format('truetype'),
+         url('../fonts/helveticaneue-light-webfont.svg#HelveticaNeueRegular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
     font-family: 'GothamBookRegular';
-    src: url('fonts/ufonts.com_gotham-book-webfont.eot');
-    src: url('fonts/ufonts.com_gotham-book-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/ufonts.com_gotham-book-webfont.woff') format('woff'),
-         url('fonts/ufonts.com_gotham-book-webfont.ttf') format('truetype'),
-         url('fonts/ufonts.com_gotham-book-webfont.svg#GothamBookRegular') format('svg');
+    src: url('../fonts/ufonts.com_gotham-book-webfont.eot');
+    src: url('../fonts/ufonts.com_gotham-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ufonts.com_gotham-book-webfont.woff') format('woff'),
+         url('../fonts/ufonts.com_gotham-book-webfont.ttf') format('truetype'),
+         url('../fonts/ufonts.com_gotham-book-webfont.svg#GothamBookRegular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
-
-/*@font-face {
-    font-family: 'PalatinoRoman';
-    src: url('fonts/palatino_roman-webfont.eot');
-    src: url('fonts/palatino_roman-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/palatino_roman-webfont.woff') format('woff'),
-         url('fonts/palatino_roman-webfont.ttf') format('truetype'),
-         url('fonts/palatino_roman-webfont.svg#PalatinoRoman') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}*/
 
 @font-face {
     font-family: 'HelveticaNeuemMedium';
-    src: url('fonts/helveticaneue-medium-webfont.eot');
-    src: url('fonts/helveticaneue-medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/helveticaneue-medium-webfont.woff') format('woff'),
-         url('fonts/helveticaneue-medium-webfont.ttf') format('truetype'),
-         url('fonts/helveticaneue-medium-webfont.svg#HelveticaNeueRegular') format('svg');
+    src: url('../fonts/helveticaneue-medium-webfont.eot');
+    src: url('../fonts/helveticaneue-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helveticaneue-medium-webfont.woff') format('woff'),
+         url('../fonts/helveticaneue-medium-webfont.ttf') format('truetype'),
+         url('../fonts/helveticaneue-medium-webfont.svg#HelveticaNeueRegular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
     font-family: 'PTSansRegular';
-    src: url('fonts/pts55f-webfont.eot');
-    src: url('fonts/pts55f-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/pts55f-webfont.woff') format('woff'),
-         url('fonts/pts55f-webfont.ttf') format('truetype'),
-         url('fonts/pts55f-webfont.svg#PTSansRegular') format('svg');
+    src: url('../fonts/pts55f-webfont.eot');
+    src: url('../fonts/pts55f-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/pts55f-webfont.woff') format('woff'),
+         url('../fonts/pts55f-webfont.ttf') format('truetype'),
+         url('../fonts/pts55f-webfont.svg#PTSansRegular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
     font-family: 'MuseoSlab500';
-    src: url('fonts/museo500-regular-webfont.eot');
-    src: url('fonts/museo500-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/museo500-regular-webfont.woff') format('woff'),
-         url('fonts/museo500-regular-webfont.ttf') format('truetype'),
-         url('fonts/museo500-regular-webfont.svg#Museo500') format('svg');
+    src: url('../fonts/museo500-regular-webfont.eot');
+    src: url('../fonts/museo500-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/museo500-regular-webfont.woff') format('woff'),
+         url('../fonts/museo500-regular-webfont.ttf') format('truetype'),
+         url('../fonts/museo500-regular-webfont.svg#Museo500') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 
 @font-face {
     font-family: 'GothamThinRegular';
-    src: url('fonts/gotham-thin-webfont.eot');
-    src: url('fonts/gotham-thin-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/gotham-thin-webfont.woff') format('woff'),
-         url('fonts/gotham-thin-webfont.ttf') format('truetype'),
-         url('fonts/gotham-thin-webfont.svg#GothamThinRegular') format('svg');
+    src: url('../fonts/gotham-thin-webfont.eot');
+    src: url('../fonts/gotham-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham-thin-webfont.woff') format('woff'),
+         url('../fonts/gotham-thin-webfont.ttf') format('truetype'),
+         url('../fonts/gotham-thin-webfont.svg#GothamThinRegular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
-body{ width: 100%; min-width: 960px; background: url(images/bg.png) repeat; color:#333333; font:13px Helvetica, Tahoma, Arial, Geneva, sans-serif;}
+body{ width: 100%; min-width: 960px; background: url(../images/bg.png) repeat; color:#333333; font:13px Helvetica, Tahoma, Arial, Geneva, sans-serif;}
 
 h1,h2,h3,h4,h5,h6{ font-weight:bold; }
 h1{ font-size:30px;}
@@ -136,7 +118,7 @@ a:hover, a:active { outline: 0; }
 .clearfix { *zoom: 1; }
 
 /** main-wrap  **/
-#main-wrap { background:url(images/main-bg.png) repeat-x top left; min-width: 990px; overflow: hidden;}
+#main-wrap { background:url(../images/main-bg.png) repeat-x top left; min-width: 990px; overflow: hidden;}
 /**  #header-wrap  **/
 #header-wrap {}
 #header-wrap #header { position: relative; width: 940px; height: 110px; padding: 0px 10px 0 10px; line-height: 110px; margin: 0px auto;}
@@ -154,14 +136,14 @@ a:hover, a:active { outline: 0; }
 
 
 /**  banner-wrap **/
-#banner-wrap { position: relative; height: 425px; overflow: hidden;/* background: url(images/bg-banner.jpg) repeat-x; height: 425px; width: 100%; min-width: 960px; padding-top: 20px;*/}
+#banner-wrap { position: relative; height: 425px; overflow: hidden;/* background: url(../images/bg-banner.jpg) repeat-x; height: 425px; width: 100%; min-width: 960px; padding-top: 20px;*/}
 
 #banner-wrap #banner { position: relative; z-index: 140;  height: 405px; padding: 20px 0 0 0; margin: 0px auto; text-align: center; overflow: hidden; }
 #banner h1 { position: relative; z-index: 150;font-family: "GothamBookRegular",Arial, Helvetica, sans-serif; font-size: 48px; font-weight: normal; color: #fefefe; text-shadow: 2px 2px 13px  #000000; -moz-text-shadow: 2px 2px 3px #000000; -webkit-text-shadow: 2px 2px 13px #000000; -ms-text-shadow: 2px 2px 13px #000000; -o-text-shadow: 2px 2px 13px #000000;}
 #banner .banner-image { position: relative; z-index: 150; margin: 15px 0 0 0;}
 /*.banner-shadow { position: absolute; bottom: -18px; left: 0px; z-index:180;}*/
-.banner-shadow { position: relative; z-index: 400; bottom: 20px;  background:url(images/banner-bottom-shadow2.png) no-repeat; width: 1033px; height: 35px; margin: 0px auto;}
-.lights { position: absolute; z-index: 120; top: 0px; background: url(images/lights3.jpg) no-repeat; height: 190px; width: 1140px; margin: 0px auto; }
+.banner-shadow { position: relative; z-index: 400; bottom: 48px;  background:url(../images/banner-bottom-shadow2.png) no-repeat; width: 1033px; height: 35px; margin: 0px auto;}
+.lights { position: absolute; z-index: 120; top: 0px; background: url(../images/lights3.jpg) no-repeat; height: 190px; width: 1140px; margin: 0px auto; }
 .ie7 .lights { height: 0px;}
 
 /** contents-wrap **/
@@ -179,16 +161,16 @@ a:hover, a:active { outline: 0; }
 #page-wrap { clear: both; position: relative; top: -350px; z-index: 300; width: 100%; min-width: 960px; margin-bottom: -350px; }
 
 
-.top-shadow {  background:url(images/bg-top.png) no-repeat; width: 978px; height: 35px; margin: 0px auto;}
+.top-shadow {  background:url(../images/bg-top.png) no-repeat; width: 978px; height: 35px; margin: 0px auto;}
 
 /**  page-inner-wrap  **/
-#page-wrap #page-inner-wrap { background:url(images/bg-repeat.png) repeat-y top center; width: 858px; min-height: 700px; padding: 40px 55px 45px 65px;  margin: 0px auto;}
+#page-wrap #page-inner-wrap { background:url(../images/bg-repeat.png) repeat-y top center; width: 858px; min-height: 700px; padding: 40px 55px 45px 65px;  margin: 0px auto;}
 #page-inner-wrap .alignleft { float: left; margin: 0 38px 10px 0;}
 #page-inner-wrap .alignright { float: right; margin: 0 0 10px 38px;}
 #page-inner-wrap h1 { font-family: "MuseoSlab500", Arial, Helvetica, sans-serif; font-size: 60px; font-weight: normal;  margin-bottom: 6px;}
 #page-inner-wrap h2 { font-family: "MuseoSlab500", Arial, Helvetica, sans-serif; font-size: 34px; font-weight: normal;  margin-bottom: 6px;}
 #page-inner-wrap ul { overflow: hidden;  margin: 0 0 10px 0;}
-#page-inner-wrap ul li {background: url(images/bullet.png) no-repeat left 15px; padding: 0 0 0 34px; line-height: 39px; }
+#page-inner-wrap ul li {background: url(../images/bullet.png) no-repeat left 15px; padding: 0 0 0 34px; line-height: 39px; }
 #page-inner-wrap a { color: #43b3ee; }
 .try-btn { float: right; margin: 0 25px 10px 0;}
 .try-btn:hover, .try-btn:focus { opacity: 0.8;}
@@ -197,16 +179,16 @@ a:hover, a:active { outline: 0; }
 #page-inner-wrap h1.title-big-thin { font-family: "GothamThinRegular", Arial, Helvetica, sans-serif; font-size: 60px; font-weight: normal; color: #d62622; line-height: 64px; text-align: center; margin-bottom: 30px; text-shadow: 0px 1px 1px #777777; -moz-text-shadow: 0px 1px 1px #777777; -webkit-text-shadow: 0px 1px 1px #777777; -ms-text-shadow: 0px 1px 1px #777777; -o-text-shadow: 0px 1px 1px #777777;}
 
 
-.border-line { position: relative; left: -14px; height: 1px; width: 873px; background:url(images/border-line.png) no-repeat; margin-bottom: 30px;}
+.border-line { position: relative; left: -14px; height: 1px; width: 873px; background:url(../images/border-line.png) no-repeat; margin-bottom: 30px;}
 
 /**  box-container **/
-.box-container { overflow: hidden; padding: 20px 0 25px 0; position: relative; background:url(images/line.png) no-repeat 480px 40px; }
+.box-container { overflow: hidden; padding: 20px 0 25px 0; position: relative; background:url(../images/line.png) no-repeat 480px 40px; }
 
 .box-container #how-works { overflow: hidden; width: 440px; float: left;}
-#how-works h3 { background: url(images/tools.png) no-repeat left center; padding-left: 30px; font-family: "MuseoSlab500", Arial, Helvetica, sans-serif; font-size: 34px; font-weight: normal;  margin-bottom: 6px; }
+#how-works h3 { background: url(../images/tools.png) no-repeat left center; padding-left: 30px; font-family: "MuseoSlab500", Arial, Helvetica, sans-serif; font-size: 34px; font-weight: normal;  margin-bottom: 6px; }
  
 .box-container #benefits { overflow: hidden; width: 320px; float: right; margin: 0 25px 0 0;}
-#benefits h3 { background: url(images/great-icon.png) no-repeat left center; padding-left: 30px; font-family: "MuseoSlab500", Arial, Helvetica, sans-serif; font-size: 34px; font-weight: normal; color: #db2c28; margin-bottom: 6px; }
+#benefits h3 { background: url(../images/great-icon.png) no-repeat left center; padding-left: 30px; font-family: "MuseoSlab500", Arial, Helvetica, sans-serif; font-size: 34px; font-weight: normal; color: #db2c28; margin-bottom: 6px; }
 .box-container #benefits ul li { line-height: 25px;}
 
 /**  about-contents  **/
@@ -215,13 +197,13 @@ a:hover, a:active { outline: 0; }
 #page-inner-wrap  #about-contents .alignright { float: right; margin: 30px 0 10px 38px;}
 
 /**  #find-solution  **/
-#find-solution { clear: both; overflow: hidden; background: url(images/gradient-border.png) no-repeat top left; padding: 25px 0 18px 0;}
+#find-solution { clear: both; overflow: hidden; background: url(../images/gradient-border.png) no-repeat top left; padding: 25px 0 18px 0;}
 #find-solution h3 { font-family: "MuseoSlab500", Arial, Helvetica, sans-serif; font-size: 24px; font-weight: normal;  margin-bottom: 6px;}
 #find-solution h2.title-solution { font-family: "GothamThinRegular", Helvetica, Arial, sans-serif; font-size: 30px; font-weight: bold; color: #d62622; text-align: left; margin-bottom: 20px; /*text-shadow: 2px 2px 2px #c9c9c9; -moz-text-shadow: 2px 2px 2px #c9c9c9; -webkit-text-shadow: 2px 2px 2px #c9c9c9; -ms-text-shadow: 2px 2px 2px #c9c9c9; -o-text-shadow: 2px 2px 2px #c9c9c9;*/}
 
 /**  hosted-site  **/
 #find-solution #hosted-site { position: relative;  clear: both; float: left; overflow: hidden; width: 380px; padding: 0 20px 25px 0;  margin-bottom: 25px;}
-#hosted-site h3 { background: url(images/hosted.png) no-repeat left center; padding: 0 0 0 45px;}
+#hosted-site h3 { background: url(../images/hosted.png) no-repeat left center; padding: 0 0 0 45px;}
 #page-inner-wrap #about-contents #find-solution h3 a { color: #333333; text-decoration: none;}
 #page-inner-wrap #about-contents #find-solution h3 a:hover { color: #999;}
 #hosted-site .create-your-site { position: absolute; left: 0px; bottom: 0px;}
@@ -229,15 +211,15 @@ a:hover, a:active { outline: 0; }
 
 /**  #signup-enterprise  **/
 #signup-enterprise { overflow: hidden; width: 420px; float: left; position: relative; padding-bottom: 25px; margin-bottom: 25px;}
-#signup-enterprise h3 { background: url(images/mens.png) no-repeat left center; padding: 0 0 0 45px;}
-#signup-enterprise .see-examples { position: absolute; left: 0px; bottom: 0px; display: inline-block; font-family: "HelveticaNeueRegular",Arial, Helvetica, sans-serif; font-size: 12px; color: #555555; text-decoration: none; background: url(images/btn-bg.png) no-repeat; height: 29px; width: 134px; padding: 0 8px 0 8px; line-height: 26px; }
+#signup-enterprise h3 { background: url(../images/mens.png) no-repeat left center; padding: 0 0 0 45px;}
+#signup-enterprise .see-examples { position: absolute; left: 0px; bottom: 0px; display: inline-block; font-family: "HelveticaNeueRegular",Arial, Helvetica, sans-serif; font-size: 12px; color: #555555; text-decoration: none; background: url(../images/btn-bg.png) no-repeat; height: 29px; width: 134px; padding: 0 8px 0 8px; line-height: 26px; }
 #signup-enterprise .see-examples:hover , #signup-enterprise .see-examples:focus  { color:#333333;}
 #signup-enterprise .learn-more-btn { position: absolute; left: 162px; bottom: 0px;}
 #signup-enterprise .learn-more-btn:hover,#signup-enterprise .learn-more-btn:focus { opacity: 0.8;}
 
 /**  host-instance **/
 #find-solution #host-instance { clear: both; overflow: hidden;}
-#host-instance  h3 { background: url(images/host-instance.png) no-repeat left center; padding: 3px 0 0 45px;}
+#host-instance  h3 { background: url(../images/host-instance.png) no-repeat left center; padding: 3px 0 0 45px;}
 #page-inner-wrap #about-contents #host-instance h3 a { color: #333333; text-decoration: none;}
 #about-contents #pcf { clear: both; overflow: hidden;}
 #about-contents #pcf .alignright { margin-top: 0px;}
@@ -252,9 +234,9 @@ a:hover, a:active { outline: 0; }
 
 #page-inner-wrap #features ul { margin: 0px; padding: 0px; list-style: none; margin-bottom: 20px;}
 #page-inner-wrap #features ul li { position: relative; background: none; margin: 0 7px 10px 0px; padding: 12px 0px 0 0px; }
-#page-inner-wrap #features ul li .grip { background:url(images/holder.png) no-repeat; width: 93px; height: 24px; position: absolute; z-index:400; left: 32%; top: -1px;}
+#page-inner-wrap #features ul li .grip { background:url(../images/holder.png) no-repeat; width: 93px; height: 24px; position: absolute; z-index:400; left: 32%; top: -1px;}
 #page-inner-wrap #features .features-list li { width: 281px; overflow: hidden; float: left; text-align: center;}
-#page-inner-wrap #features .features-list li .features-frame { overflow: hidden; display: table-cell; vertical-align: middle; background:url(images/featured-img-frame2.png) no-repeat; width: 277px; height: 185px; padding: 2px 2px 2px 2px; }
+#page-inner-wrap #features .features-list li .features-frame { overflow: hidden; display: table-cell; vertical-align: middle; background:url(../images/featured-img-frame2.png) no-repeat; width: 277px; height: 185px; padding: 2px 2px 2px 2px; }
 #page-inner-wrap #features .features-list li .features-frame img { height: 176px; max-width: 275px; margin-top: 2px; overflow: hidden; }
 #page-inner-wrap #features .features-list li .feature-title {font-family: "MuseoSlab500", Arial, Helvetica, sans-serif; font-size: 18px; color: #333333; text-decoration: none;}
 #page-inner-wrap #features .features-list li .feature-title:hover,#page-inner-wrap #features .features-list li .feature-title:focus { color: #999;}
@@ -269,7 +251,7 @@ a:hover, a:active { outline: 0; }
 #page-inner-wrap #features .features-detailed .alignleft { float: left; margin: 0 10px 10px 0;}
 #page-inner-wrap #features .features-detailed .alignright { float: right; margin: 0 0 10px 10px;}
 #page-inner-wrap #features .features-detailed li p { margin-bottom: 10px;}
-#page-inner-wrap #features .features-detailed li .learn-more { display: inline-block; font-family: "HelveticaNeueRegular",Arial, Helvetica, sans-serif; font-size: 12px; color: #555555; text-decoration: none; text-decoration: none; background: url(images/featured-btn-bg.png) no-repeat; width: 220px; height: 29px; text-align: center; line-height: 26px;}
+#page-inner-wrap #features .features-detailed li .learn-more { display: inline-block; font-family: "HelveticaNeueRegular",Arial, Helvetica, sans-serif; font-size: 12px; color: #555555; text-decoration: none; text-decoration: none; background: url(../images/featured-btn-bg.png) no-repeat; width: 220px; height: 29px; text-align: center; line-height: 26px;}
 #page-inner-wrap #features .features-detailed li .learn-more:hover { color: #333;}
 #page-inner-wrap #features .features-detailed li .top-margin { margin-top: 40px;}
 
@@ -289,9 +271,9 @@ a:hover, a:active { outline: 0; }
 /** newsletter  **/
 #social #newsletter { float:left;}
 #social #newsletter p { float: left;}
-#newsletter p.email-input-container { overflow: hidden; background:url(images/email-input-bg.png) no-repeat; width: 173px; height: 22px; padding: 2px 5px 2px 5px; margin: 0 12px 0 0;}
+#newsletter p.email-input-container { overflow: hidden; background:url(../images/email-input-bg.png) no-repeat; width: 173px; height: 22px; padding: 2px 5px 2px 5px; margin: 0 12px 0 0;}
 #newsletter .email-input-container input { width: 173px; height: 18px; border: none; background: none; outline: none; font-family: "HelveticaNeueRegular", Arial, Helvetica, sans-serif; font-size: 11px; color: #666666;}
-#newsletter #subscribe { background:url(images/subscribe-btn.png) no-repeat; width: 61px; height: 27px; border: none; outline: none;}
+#newsletter #subscribe { background:url(../images/subscribe-btn.png) no-repeat; width: 61px; height: 27px; border: none; outline: none;}
 #newsletter #subscribe:hover, #newsletter #subscribe:focus { cursor: pointer; opacity: 0.8;  }
 
 /**  columns-features  **/
@@ -314,7 +296,7 @@ a:hover, a:active { outline: 0; }
 
 /**  footer-nav  **/
 #footer  .footer-nav{ float: left; }
-#footer  .footer-nav li { float: left; background: url(images/divider.png) no-repeat right center;}
+#footer  .footer-nav li { float: left; background: url(../images/divider.png) no-repeat right center;}
 #footer  .footer-nav li  a {font-family: "HelveticaNeueRegular",Arial, Helvetica, sans-serif; font-size: 12px; color: #55a4f2; padding: 0 15px 0 15px;  line-height: 21px; text-decoration: none;}
 #footer  .footer-nav li a:hover, #footer  .footer-nav li a:focus { text-decoration: underline;}
 
@@ -326,5 +308,5 @@ a:hover, a:active { outline: 0; }
 #page-wrap { }
 
 /**  page-inner-wrap  **/
-#page-wrap #page-inner-wrap {/* background:url(images/bg-repeat.png) repeat-y top center; width: 858px; min-height: 700px; padding: 40px 55px 45px 65px;  margin: 0px auto;*/}
+#page-wrap #page-inner-wrap {/* background:url(../images/bg-repeat.png) repeat-y top center; width: 858px; min-height: 700px; padding: 40px 55px 45px 65px;  margin: 0px auto;*/}
 
