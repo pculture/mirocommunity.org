@@ -1,55 +1,71 @@
-<h1 class="logo">Miro community</h1>
+	<div id="support-wrap">
+		<div id="support-features">
+			<div id="social">
+				<a href="/"><img class="footer-logo" src="{{ STATIC_URL }}mirocommunity_site/images/logo-footer.png" alt="MiroCommunity"></a>
+				<div id="connect">
+					<h3>Connect With Us</h3>
+					<ul class="social-nav">
+						<li><a href="#"><img src="{{ STATIC_URL }}mirocommunity_site/images/twitter.png" alt="twitter"></a></li>
+						<li><a href="#"><img src="{{ STATIC_URL }}mirocommunity_site/images/facebook.png" alt="facebook"></a></li>
+						<li><a href="#"><img src="{{ STATIC_URL }}mirocommunity_site/images/plus.png" alt="google"></a></li>
+						<li><a href="#"><img src="{{ STATIC_URL }}mirocommunity_site/images/tumblr.png" alt="tumblr"></a></li>
+					</ul>
+				</div><!-- End of #connect -->
 
-<nav class='footer-connect-nav'>
-	<h2>Connect with us</h2>
-	<ul>
-		<li><a href="https://twitter.com/#!/mirocommunity">Follow us</a></li>
-		<li><a href="http://blog.getmiro.com/">Our blog</a></li>
-	</ul>
-</nav>
+				<div id="newsletter">
+					<h3>Join our newsletter:</h3>
+					<form action="http://pcf8.pculture.org/interspire/form.php?form=1" method="post" target="_blank">
+						<input type="hidden" name="format" value="h" />
+						<p class="email-input-container"><input type="text" name="email" value="" placeholder="Your email goes here" class="required email"  tabindex="2" /></p>
+						<p><input name="subscribe" id="subscribe" type="submit" value="" tabindex="4" /></p>
+					</form>
+				</div>{# /#newsletter #}
+			</div>{# /#social #}
 
-<h2><label for="email">Join PCF's Newsletter:</label></h2>
-<form action="http://pcf8.pculture.org/interspire/form.php?form=1" method="post" target="_blank">
-	<input type="text" name="email" value="" placeholder="Your email goes here">
-	<input type="hidden" name="format" value="h" />
-	<input type="submit" value="Subscribe" class="b_btn">
-</form>
+			<div id="columns-features">
+				<div class="column">
+					<h3>Learn More</h3>
+					<ul>
+						<li><a href="https://develop.participatoryculture.org/index.php/MiroCommunityManual">About</a></li>
+						<li><a href="/features/">Features</a></li>
+						<li><a href="/faq/">FAQ</a></li>
+					</ul>
+				</div>
 
-<nav>
-	<h2>Learn More</h2>
-	<ul>
-		<li><a href="https://develop.participatoryculture.org/index.php/MiroCommunityManual" title="About">About</a></li>
-		<li><a href="/features/">Features</a></li>
-		<li><a href="/faq/" title="FAQ">FAQ</a></li>
-	</ul>
-</nav>
+				<div class="column">
+					<h3>The Platform</h3>
+					<ul>
+						<li><a href="/college/" title="Universities">Universities</a></li>
+						<li><a href="/pubmedia/" title="Local Media">Local Media</a></li>
+						<li><a href="/enterprise/">Enterprise Services</a></li>
+					</ul>
+				</div>
 
-<nav>
-	<h2>The Platform</h2>
-	<ul>
-		<li><a href="/college/" title="Universities">Universities</a></li>
-		<li><a href="/pubmedia/" title="Local Media">Local Media</a></li>
-		<li><a href="/enterprise/">Enterprise Services</a></li>
-	</ul>
-</nav>
+				<div class="column">
+					<h3>Community</h3>
+					<ul>
+						<li><a href="http://support.mirocommunity.org/">Support</a></li>
+						<li><a href="http://readthedocs.org/docs/mirocommunity/en/latest/contributing/index.html">Contribute</a></li>
+						<li><a href="http://readthedocs.org/docs/mirocommunity/">Docs</a></li>
+					</ul>
+				</div>
+				
+			</div>{# /#columns-features #}
+			
+			<p class="mission">Miro Community is a project of the Participatory Culture Foundation, a non-profit organization and was made possible through a grant from the John S. and James L. Knight Foundation. The Miro &amp; Miro Community names, logos, and icons are trademarks of the Participatory Culture Foundation (PCF). All text and image content on getmiro.com, unless otherwise specified, is released by PCF into the public domain. This does not include the Miro and Miro Community name, logo, and icon. This does not include the Miro Community code, which is licensed under the AGPL. Please share, re-publish, re-use, and re-imagine this site.</p>
+			
+		</div>{# /#support-features #}
+	</div>{# /#support-wrap #}
 
-<nav>
-	<h2>Community</h2>
-	<ul>
-		<li><a href="http://support.mirocommunity.org">Support</a></li>
-		<li><a href="http://readthedocs.org/docs/mirocommunity/en/latest/contributing/index.html">Contribute</a></li>
-		<li><a href="http://readthedocs.org/docs/mirocommunity/">Docs</a></li>
-	</ul>
-</nav>
-
-
-<p>Miro Community is a project of the Participatory Culture Foundation, a non-profit organization and was made possible through a grant from the John S. and James L. Knight Foundation. The Miro &amp; Miro Community names, logos, and icons are trademarks of the Participatory Culture Foundation (PCF). All text and image content on mirocommunity.org, unless otherwise specified, is released by PCF into the public domain. This does not include the Miro and Miro Community name, logo, and icon. This does not include the Miro Community code, which is licensed under the AGPL. Please share, re-publish, re-use, and re-imagine this site.</p>
-
-<nav class="subfooter-nav">
-	<ul>
-		<li><a href="mailto:support@mirocommunity.org">Contact</a></li>
-		<li><a href="http://mirocommunity.org/terms">Terms of Use</a></li>
-		<li><a href="http://pculture.org/pcf/websites-privacy/">Privacy Policy</a></li>
-	</ul>
-	<p>MiroCommunity &copy; 2012</p>
-</nav>
+	<div id="footer-wrap">
+		<div id="footer">
+			<ul class="footer-nav">
+				<li><a href="mailto:support@mirocommunity.org">Contact</a></li>
+				<li><a href="http://mirocommunity.org/terms">Terms of Use</a></li>
+				<li><a href="http://pculture.org/pcf/websites-privacy/">Privacy Policy</a></li>
+			</ul>
+			<h5>MiroCommunity &copy; 2012</h5>
+		</div>
+		
+	
+	</div>{# /#footer-wrap #}
