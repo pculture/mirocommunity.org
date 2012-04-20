@@ -30,37 +30,27 @@
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
        chromium.org/developers/how-tos/chrome-frame-getting-started -->
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+	<header>
+		<div class='container'>
+			{% block header %}
+				{% include "mirocommunity_site/_site_header.html" %}
+			{% endblock %}
+		</div>
+	</header>
 
-	<div id="main-wrap" class="clearfix">
-		<div id="header-wrap">
-			<div id="header" class="clearfix">
-				{% block header %}
-					{% include "mirocommunity_site/_site_header.html" %}
+	<div id="main" role="main">
+		<div class="container">
+			{% block content %}
+			<div class="floatpage">
+				{% block content-inner %}
 				{% endblock %}
 			</div>
-		</div>
+			{% endblock %}
 
-		<div id="banner-wrap">
-			<div id="banner">
-				{% block banner %}
-				{% endblock %}
-			</div>
-			<div class="lights"></div>
+			{% block footer %}
+				{% include "mirocommunity_site/_site_footer.html" %}
+			{% endblock %}
 		</div>
-
-		{% block content-wrap %}
-		<div id="contents-wrap">
-			<div id="inner-wrap">
-				{% block content %}
-				{% endblock %}
-			</div>
-		</div>
-		{% endblock %}
-
-		{% block footer %}
-			{% include "mirocommunity_site/_site_footer.html" %}
-		{% endblock %}
-		
 	</div>{# /#main-wrap #}
 	
 	{% block foot-scripts %}

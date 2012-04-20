@@ -1,44 +1,36 @@
 {% extends "mirocommunity_site/__base.html" %}
 
-{% block content-wrap %}
-<div id="page-wrap">
-	<div class="top-shadow"></div>
+{% block content-inner %}
+	<a href="#"><img class="alignleft" src="{{ STATIC_URL }}mirocommunity_site/images/school-image.png" alt="college"></a>
+	<h2>Does Your School...?</h2>
+	<ul>
+		<li>Have a lot of relevant videos in many different places?</li>
+		<li>Want to better integrate video into your website? </li>
+		<li>Want flexible control over the branding of your video space?</li>
+		<li>Want to highlight student contributions in a controlled fashion?</li>
+		<li>Would rather keep viewers on your site than YouTube or Vimeo?</li>
+	</ul>
+	<a href="#"><img class="try-btn" src="{{ STATIC_URL }}mirocommunity_site/images/try-btn.png" alt="try"></a>
+	<h2 class="title-red">Managing the Explosive Growth of Media on Campus</h2>
+	<p>Every university community is producing increasing amounts of media - each major department may be making their own videos — possibly on YouTube, Vimeo, or other hosting sites — along with student groups, video lectures on iTunes U, and media appearances of faculty and students.</p>
+	<p>At the same time, universities face an increasingly competitive environment that requires creative solutions in order to capture the attention of and connect with prospective students and continue to engage alumni and donors. And all of this, in a time of exploding social media options, when controlling brand has become extremely difficult as conversations are distributed across the web. </p>
+	<p>You may be starting to feel like you’re in the business of having to constantly chase down media from all sides or letting it fall through the cracks. Or that you’re becoming a technology company in order to keep up with the quickly changing media landscape and the increasing demands around media management within your institution.</p>
+	
+	<div class="border-line"></div>
 
-	<div id="page-inner-wrap">
-		{% block content %}
-			<a href="#"><img class="alignleft" src="{{ STATIC_URL }}mirocommunity_site/images/school-image.png" alt="college"></a>
-			<h2>Does Your School...?</h2>
+	<div class="box-container">
+		<div id="how-works">
+			<h3>How Does it Work?</h3>
+			<p>Miro Community allows you to run a beautiful video presentation website on your own domain, without having to maintain the software. It has advanced curation and moderation functions, is highly customizable, and doesn’t take a lot of time to manage or run.</p>
+		</div>
+		<div id="benefits">
+			<h3>Great Benefits</h3>
 			<ul>
-				<li>Have a lot of relevant videos in many different places?</li>
-				<li>Want to better integrate video into your website? </li>
-				<li>Want flexible control over the branding of your video space?</li>
-				<li>Want to highlight student contributions in a controlled fashion?</li>
-				<li>Would rather keep viewers on your site than YouTube or Vimeo?</li>
+				<li>Site appears at your own domain</li>
+				<li>Customizable with your school’s branding</li>
+				<li>Import videos from any video site</li>
+				<li>Moderate videos and comments</li>
 			</ul>
-			<a href="#"><img class="try-btn" src="{{ STATIC_URL }}mirocommunity_site/images/try-btn.png" alt="try"></a>
-			<h2 class="title-red">Managing the Explosive Growth of Media on Campus</h2>
-			<p>Every university community is producing increasing amounts of media - each major department may be making their own videos — possibly on YouTube, Vimeo, or other hosting sites — along with student groups, video lectures on iTunes U, and media appearances of faculty and students.</p>
-			<p>At the same time, universities face an increasingly competitive environment that requires creative solutions in order to capture the attention of and connect with prospective students and continue to engage alumni and donors. And all of this, in a time of exploding social media options, when controlling brand has become extremely difficult as conversations are distributed across the web. </p>
-			<p>You may be starting to feel like you’re in the business of having to constantly chase down media from all sides or letting it fall through the cracks. Or that you’re becoming a technology company in order to keep up with the quickly changing media landscape and the increasing demands around media management within your institution.</p>
-			
-			<div class="border-line"></div>
-
-			<div class="box-container">
-				<div id="how-works">
-					<h3>How Does it Work?</h3>
-					<p>Miro Community allows you to run a beautiful video presentation website on your own domain, without having to maintain the software. It has advanced curation and moderation functions, is highly customizable, and doesn’t take a lot of time to manage or run.</p>
-				</div>
-				<div id="benefits">
-					<h3>Great Benefits</h3>
-					<ul>
-						<li>Site appears at your own domain</li>
-						<li>Customizable with your school’s branding</li>
-						<li>Import videos from any video site</li>
-						<li>Moderate videos and comments</li>
-					</ul>
-				</div>
-			</div>
-		{% endblock %}
-	</div>{# /.page-inner-wrap #}
-</div>{# /#page-wrap #}
+		</div>
+	</div>
 {% endblock %}
