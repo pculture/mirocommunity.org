@@ -1,74 +1,96 @@
 ﻿{% extends 'mirocommunity_site/__base.html' %}
 
-{% block banner %}
-	<h1>The easiest way to make a video website</h1>
-	<img src="{{ STATIC_URL }}mirocommunity_site/images/banner.png">
-	<!--a href="/signup/" title="Get started">Build a Video Community</a-->
+{% block pre-content %}
+	<figure class="banner">
+		<h1>The easiest way to make a video website</h1>
+		<img src="{{ STATIC_URL }}mirocommunity_site/images/content/index/banner.png">
+		{# <a href="/signup/">Build a Video Community</a> #}
+	</figure>
 {% endblock %}
 
 {% block content %}
-<h1>What makes miro community so powerful?</h1>
-<ul>
-	<li>
-		<img src="{{ STATIC_URL }}mirocommunity_site/images/step_1.png" alt="image"/>
-		<h3>Setup is Easy, Beautiful and Fast</h3>
-		<p>Set up a site in minutes - let us take case of updates and compatibility - no software to install. Can be used on any browser, on any computer. Works with all the best video hosts, including your own hosting - no need to change your workflow.</p>
-	</li>
-	<li>
-		<img src="{{ STATIC_URL }}mirocommunity_site/images/step_2.png" alt="image"/>
-		<h3>Bring in Video from Everywhere</h3>
-		<p>Collect videos from YouTube, Vimeo, iTunes U, Blip or self-hosted sites for a one stop video experience. Include individual videos or add updating feeds to keep up with your sources without additional searching.</p>
-	</li>
-	<li>
-		<img src="{{ STATIC_URL }}mirocommunity_site/images/step_3.png" alt="image"/>
-		<h3>Quickly Curate Streams of Content</h3>
-		<p>Review incoming videos, accept user submissions, and tag videos to fit your needs. There's no faster way to manage a video site - requires very little staff time to reach a high quality level.</p>
-	</li>	
-</ul>
-<ul>
-	<li>
-		<span class="home"></span>
-		<h4>Local communities</h4>
-		<p>Create connections between producers and nearby audiences.</p>
-	</li>
-	<li>
-		<span class="uni"></span>
-		<h4>Universities</h4>
-		<p>Bring together content in a branded video portal. <a href="http://ondemand.duke.edu/"> Example</a>.</p>
-	</li>
-	<li>
-		<span class="cup"></span>
-		<h4>Video contests</h4>
-		<p>Use our powerful platform to accept submissions and vote. <a href="http://whyopenedmatters.org/"> Example</a>.</p>
-	</li>
-	<li>
-		<span class="vid"></span>
-		<h4>Video publishers</h4>
-		<p>Organize your videos for easy access and distribution.</p>
-	</li>
-	
-</ul>
+<div class='l-section'>
+	<h1>What makes miro community so powerful?</h1>
 
-<section class="gallery sec">
-	<aside>
-		<h3>Featured Sites</h3>
-		<p>Miro Community sites run the gamut: universities, local communities, and more.</p>
-		<a href="/signup/" title="Start now">Create a Site</a>
-	</aside>
-	<ul>
-		<li>
-			<a href="http://skiddplayer.com/"><img src="{{ STATIC_URL }}mirocommunity_site/images/gal_1.jpg" alt="image" /></a>
-			<p>SkiddPlayer</p>
-		</li>
-		<li>
-			<a href="http://whyopenedmatters.org/"><img src="{{ STATIC_URL }}mirocommunity_site/images/gal_2.jpg" alt="image" /></a>
-			<p>Creative Commons Contest</p>
-		</li>
-		<li class="l">
-			<a href="http://pittsburghonvideo.org/"><img src="{{ STATIC_URL }}mirocommunity_site/images/gal_3.jpg" alt="image" /></a>
-			<p>Pittsburgh on Video</p>
-		</li>
-	</ul>
-	<div class="clear"></div>
-</section>
+	<div class='l-thirds-wide l-section'>
+		<div>
+			<figure class='framed'>
+				<img src="{{ STATIC_URL }}mirocommunity_site/images/content/index/setup.png">
+			</figure>
+			<h3>Setup is Easy, Beautiful and Fast</h3>
+			<p>Set up a site in minutes - let us take case of updates and compatibility - no software to install. Can be used on any browser, on any computer. Works with all the best video hosts, including your own hosting - no need to change your workflow.</p>
+		</div>
+		<div>
+			<figure class='framed'>
+				<img src="{{ STATIC_URL }}mirocommunity_site/images/content/index/sources.png">
+			</figure>
+			<h3>Bring in Video from Everywhere</h3>
+			<p>Collect videos from YouTube, Vimeo, iTunes U, Blip or self-hosted sites for a one stop video experience. Include individual videos or add updating feeds to keep up with your sources without additional searching.</p>
+		</div>
+		<div>
+			<figure class='framed'>
+				<img src="{{ STATIC_URL }}mirocommunity_site/images/content/index/curate.png">
+			</figure>
+			<h3>Quickly Curate Streams of Content</h3>
+			<p>Review incoming videos, accept user submissions, and tag videos to fit your needs. There's no faster way to manage a video site - requires very little staff time to reach a high quality level.</p>
+		</div>	
+	</div>
+	<div class='l-quarters-wide l-section'>
+		<div>
+			<h3 class='icon icon-house'>Local communities</h3>
+			<p>Create connections between producers and nearby audiences.</p>
+		</div>
+		<div>
+			<h3 class='icon icon-parthenon'>Universities</h3>
+			<p>Bring together content in a branded video portal. <a href="http://ondemand.duke.edu/"> Example</a>.</p>
+		</div>
+		<div>
+			<h3 class='icon icon-trophy'>Video contests</h3>
+			<p>Use our powerful platform to accept submissions and vote. <a href="http://whyopenedmatters.org/"> Example</a>.</p>
+		</div>
+		<div>
+			<h3 class='icon icon-movie-reel'>Video publishers</h3>
+			<p>Organize your videos for easy access and distribution.</p>
+		</div>
+	</div>
+
+	<div class="l-bordered-box">
+	<div class="l-quarters-wide">
+		<div>
+			<h2 class='accent'>Featured Sites</h2>
+			<p>Miro Community sites run the gamut: universities, local communities, and more.</p>
+			<a href="/signup/" title="Start now">Create a Site</a>
+		</div>
+		<div>
+			<a class="wrapping" href="http://skiddplayer.com/">
+				<figure>
+					<div class='framed'>
+						<img src="{{ STATIC_URL }}mirocommunity_site/images/gal_1.jpg">
+					</div>
+					<figcaption><h3>SkiddPlayer</h3></figcaption>
+				</figure>
+			</a>
+		</div>
+		<div>
+			<a class="wrapping" href="http://whyopenedmatters.org/">
+				<figure>
+					<div class='framed'>
+						<img src="{{ STATIC_URL }}mirocommunity_site/images/gal_2.jpg">
+					</div>
+					<figcaption><h3>Creative Commons Contest</h3></figcaption>
+				</figure>
+			</a>
+		</div>
+		<div>
+			<a class="wrapping" href="http://pittsburghonvideo.org/">
+				<figure>
+					<div class='framed'>
+						<img src="{{ STATIC_URL }}mirocommunity_site/images/gal_3.jpg">
+					</div>
+					<figcaption><h3>Pittsburgh on Video</h3></figcaption>
+				</figure>
+			</a>
+		</div>
+	</div></div>
+</div>
 {% endblock %}

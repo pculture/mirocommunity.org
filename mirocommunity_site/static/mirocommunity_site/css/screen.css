@@ -46,6 +46,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .l-thirds > div { width: 276.474px; float: left; padding: 0 14px 0 0; }
 .l-thirds > div:last-child { padding: 0; }
 
+.l-thirds-wide > div { width: 310.44px; float: left; padding: 0 14px 0 0; }
+.l-thirds-wide > div:last-child { padding: 0; }
+
+.l-quarters-wide > div { width: 229.5px; float: left; padding: 0 14px 0 0; }
+.l-quarters-wide > div:last-child { padding: 0; }
+
 /** Base Body Styles **/
 body { width: 100%; min-width: 960px; background: #f0f0f0; }
 
@@ -69,23 +75,17 @@ h6 { font-size: 10px; }
 ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
 
 /** Links **/
-a { color: #00e; }
-
-a:visited { color: #551a8b; }
-
-a:hover { color: #06e; }
-
 a:focus { outline: thin dotted; }
 
 /* Improve readability when focused and hovered in all browsers: h5bp.com/h */
 a:hover, a:active { outline: 0; }
 
 /** Contain floats: h5bp.com/q **/
-.clearfix:before, .l-bordered-box:before, .l-60-40:before, .l-50-50:before, .l-thirds:before, .clearfix:after, .l-bordered-box:after, .l-60-40:after, .l-50-50:after, .l-thirds:after { content: ""; display: table; }
+.clearfix:before, .l-bordered-box:before, .l-60-40:before, .l-50-50:before, .l-thirds:before, .l-thirds-wide:before, .l-quarters-wide:before, .clearfix:after, .l-bordered-box:after, .l-60-40:after, .l-50-50:after, .l-thirds:after, .l-thirds-wide:after, .l-quarters-wide:after { content: ""; display: table; }
 
-.clearfix:after, .l-bordered-box:after, .l-60-40:after, .l-50-50:after, .l-thirds:after { clear: both; }
+.clearfix:after, .l-bordered-box:after, .l-60-40:after, .l-50-50:after, .l-thirds:after, .l-thirds-wide:after, .l-quarters-wide:after { clear: both; }
 
-.clearfix, .l-bordered-box, .l-60-40, .l-50-50, .l-thirds { *zoom: 1; }
+.clearfix, .l-bordered-box, .l-60-40, .l-50-50, .l-thirds, .l-thirds-wide, .l-quarters-wide { *zoom: 1; }
 
 .container { width: 960px; height: 100%; margin: 0 auto; position: relative; }
 
@@ -118,21 +118,34 @@ header .logo { position: absolute; left: 10px; top: 30px; }
 .main h2.icon-businessmen:before { display: block; content: ""; position: absolute; height: 38px; width: 33px; top: -8px; left: 0; background: url(../images/icons/businessmen.png) no-repeat left 1px; }
 .main h2.icon-monitor { background: url(../images/icons/monitor.png) no-repeat left center; }
 .main h2.icon-www { background: url(../images/icons/www.png) no-repeat left 1px; }
-.main h3 { font-family: "MuseoSlab500", Arial, Helvetica, sans-serif; font-size: 18px; color: #333333; font-weight: normal; }
+.main h3 { font-family: "MuseoSlab500", Arial, Helvetica, sans-serif; font-size: 18px; color: #333333; font-weight: normal; margin-bottom: 14px; }
+.main h3.icon { padding-left: 30px; position: relative; }
+.main h3.icon-house { background: url(../images/icons/house.png) no-repeat left top; }
+.main h3.icon-parthenon { background: url(../images/icons/parthenon.png) no-repeat left top; }
+.main h3.icon-trophy { background: url(../images/icons/trophy.png) no-repeat left top; }
+.main h3.icon-movie-reel { background: url(../images/icons/movie-reel.png) no-repeat left top; }
 .main p, .main ul, .main ol, .main dl, .main blockquote { color: #333333; font-size: 14px; font-family: Helvetica, Tahoma, Arial, Geneva, sans-serif; line-height: 24px; margin-bottom: 14px; }
 .main ul { list-style: square outside; }
 .main ol { list-style: decimal outside; }
+.main a { color: #43B3EE; text-decoration: none; }
+.main a:hover { text-decoration: underline; }
+.main a.wrapping { text-decoration: none; }
 
-.taped { position: relative; margin: 14px 0 54px; height: 180px; border: 1px solid #C8CACE; background: #E9ECEE; -moz-border-radius: 3px; -webkit-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px; -khtml-border-radius: 3px; border-radius: 3px; -moz-box-shadow: inset 0 0 0 2px white; -webkit-box-shadow: inset 0 0 0 2px white; -o-box-shadow: inset 0 0 0 2px white; box-shadow: inset 0 0 0 2px white; }
+figcaption { text-align: center; }
+
+.framed { border: 1px solid #C8CACE; background: #E9ECEE; -moz-border-radius: 3px; -webkit-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px; -khtml-border-radius: 3px; border-radius: 3px; -moz-box-shadow: inset 0 0 0 2px white; -webkit-box-shadow: inset 0 0 0 2px white; -o-box-shadow: inset 0 0 0 2px white; box-shadow: inset 0 0 0 2px white; padding: 2px; margin-bottom: 18px; }
+.framed > img { display: block; margin: 0 auto; }
+
+.taped { position: relative; margin: 14px 0 54px; height: 180px; }
 .taped:before { content: ""; background: url(../images/tape.png) top center no-repeat; position: absolute; top: -14px; left: 0; width: 100%; height: 24px; }
 .taped > h3 { position: absolute; bottom: -36px; width: 100%; text-align: center; }
 
 /**  banner **/
-.banner { height: 425px; overflow: hidden; margin-bottom: 18px; }
+.banner { position: relative; }
 .banner > h1 { font-family: "GothamBookRegular",Arial, Helvetica, sans-serif; font-size: 48px; font-weight: normal; color: #fefefe; text-shadow: 2px 2px 13px black; text-align: center; margin: 14px 0; }
 .banner > img { display: block; margin: 0 auto; }
 
-.banner-shadow { position: relative; }
+.banner-shadow { margin-bottom: 18px; overflow: hidden; height: 425px; }
 .banner-shadow:after { content: ""; display: block; position: absolute; bottom: -15px; left: 0; width: 100%; height: 35px; background: url(../images/banner-bottom-shadow.png) no-repeat bottom center; }
 
 .floatpage { background-color: #f8f8f8; -moz-box-shadow: 0 0 20px -2px; -webkit-box-shadow: 0 0 20px -2px; -o-box-shadow: 0 0 20px -2px; box-shadow: 0 0 20px -2px; width: 858px; padding: 40px 40px 90px 40px; margin: 100px auto -50px; }

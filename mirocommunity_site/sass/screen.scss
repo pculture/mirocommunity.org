@@ -35,9 +35,6 @@ h6{font-size:$tiny;}
 
 
 /** Links **/
-a { color: #00e; }
-a:visited { color: #551a8b; }
-a:hover { color: #06e; }
 a:focus { outline: thin dotted; }
 /* Improve readability when focused and hovered in all browsers: h5bp.com/h */
 a:hover, a:active { outline: 0; }
@@ -149,6 +146,24 @@ header {
 		font-size: $large;
 		color: #333333;
 		font-weight: normal;
+		margin-bottom: $normal;
+
+		&.icon{
+			padding-left: 30px;
+			position: relative;
+		}
+		&.icon-house{
+			background: url(../images/icons/house.png) no-repeat left top;
+		}
+		&.icon-parthenon{
+			background: url(../images/icons/parthenon.png) no-repeat left top;
+		}
+		&.icon-trophy{
+			background: url(../images/icons/trophy.png) no-repeat left top;
+		}
+		&.icon-movie-reel{
+			background: url(../images/icons/movie-reel.png) no-repeat left top;
+		}
 	}
 
 	p, ul, ol, dl, blockquote{
@@ -164,17 +179,44 @@ header {
 	ol{
 		list-style: decimal outside;
 	}
+
+	a{
+		color: #43B3EE;
+		text-decoration: none;
+
+		&:hover{
+			text-decoration: underline;
+		}
+		&.wrapping{
+			text-decoration: none;
+		}
+	}
 }
+
+figure {}
+
+	figcaption{
+		text-align: center;
+	}
+
+	.framed{
+		border: 1px solid #C8CACE;
+		background: #E9ECEE;
+		@include border-radius(3px);
+		@include box-shadow(inset 0 0 0 2px #fff);
+		padding: 2px;
+		margin-bottom: $large;
+
+		& > img{
+			display: block;
+			margin: 0 auto;
+		}
+	}
 
 	.taped{
 		position: relative;
 		margin: 14px 0 3 * $large;
-
 		height: 180px;
-		border:1px solid #C8CACE;
-		background: #E9ECEE;
-		@include border-radius(3px);
-		@include box-shadow(inset 0 0 0 2px #fff);
 
 		&:before{
 			content: "";
@@ -196,9 +238,7 @@ header {
 
 /**  banner **/
 .banner{
-	height: 425px;
-	overflow: hidden;
-	margin-bottom: $large;
+	position: relative;
 
 	& > h1{
 		font-family: "GothamBookRegular",Arial, Helvetica, sans-serif;
@@ -216,8 +256,9 @@ header {
 }
 
 	.banner-shadow{
-		position: relative;
-
+		margin-bottom: $large;
+		overflow: hidden;
+		height: 425px;
 		&:after{
 			content: "";
 			display: block;
@@ -229,13 +270,7 @@ header {
 			background: url(../images/banner-bottom-shadow.png) no-repeat bottom center;
 		}
 	}
-//#banner-wrap { position: relative; height: 425px; overflow: hidden;/* background: url(../images/bg-banner.jpg) repeat-x; height: 425px; width: 100%; min-width: 960px; padding-top: 20px;*/}
-//
-//#banner-wrap #banner { position: relative; z-index: 140;  height: 405px; padding: 20px 0 0 0; margin: 0px auto; text-align: center; overflow: hidden; }
-//#banner h1 { position: relative; z-index: 150;font-family: "GothamBookRegular",Arial, Helvetica, sans-serif; font-size: 48px; font-weight: normal; color: #fefefe; text-shadow: 2px 2px 13px  #000000; -moz-text-shadow: 2px 2px 3px #000000; -webkit-text-shadow: 2px 2px 13px #000000; -ms-text-shadow: 2px 2px 13px #000000; -o-text-shadow: 2px 2px 13px #000000;}
-//#banner .banner-image { position: relative; z-index: 150; margin: 15px 0 0 0;}
-///*.banner-shadow { position: absolute; bottom: -18px; left: 0px; z-index:180;}*/
-//.banner-shadow { position: relative; z-index: 400; bottom: 48px;  background:url(../images/banner-bottom-shadow2.png) no-repeat; width: 1033px; height: 35px; margin: 0px auto;}
+
 
 .floatpage{
 	background-color:#f8f8f8;

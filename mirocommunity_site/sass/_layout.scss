@@ -68,3 +68,31 @@
 		}
 	}
 }
+
+.l-thirds-wide{
+	@extend .clearfix;
+
+	& > div{
+		width: .333 * $wide-width - .66 * $normal;
+		float: left;
+		padding: 0 $normal 0 0;
+
+		&:last-child{
+			padding: 0;
+		}
+	}
+}
+
+.l-quarters-wide{
+	@extend .clearfix;
+
+	& > div{
+		width: .25 * $wide-width - .75 * $normal;
+		float: left;
+		padding: 0 $normal 0 0;
+
+		&:last-child{
+			padding: 0;
+		}
+	}
+}
