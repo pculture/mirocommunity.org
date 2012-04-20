@@ -55,11 +55,33 @@
 	}
 }
 
-.l-thirds{
+.l-25-40-35{
 	@extend .clearfix;
+	$column-padding: 3 * $normal;
+	$total-column-width: $main-width - 2 * $column-padding;
 
 	& > div{
-		width: .333 * $main-width - .66 * $normal;
+		width: .4 * $total-column-width;
+		float: left;
+		padding: 0 $column-padding 0 0;
+
+		&:last-child{;
+			padding: 0;
+			width: .35 * $total-column-width;
+		}
+		&:first-child{
+			width: .25 * $total-column-width;
+		}
+	}
+}
+
+.l-thirds{
+	@extend .clearfix;
+	$column-padding: $normal;
+	$total-column-width: $main-width - 2 * $column-padding;
+
+	& > div{
+		width: .333 * $total-column-width;
 		float: left;
 		padding: 0 $normal 0 0;
 
@@ -71,9 +93,27 @@
 
 .l-thirds-wide{
 	@extend .clearfix;
+	$column-padding: $normal;
+	$total-column-width: $wide-width - 2 * $column-padding;
 
 	& > div{
-		width: .333 * $wide-width - .66 * $normal;
+		width: .333 * $total-column-width;
+		float: left;
+		padding: 0 $normal 0 0;
+
+		&:last-child{
+			padding: 0;
+		}
+	}
+}
+
+.l-quarters{
+	@extend .clearfix;
+	$column-padding: $normal;
+	$total-column-width: $main-width - 3 * $column-padding;
+
+	& > div{
+		width: .25 * $total-column-width;
 		float: left;
 		padding: 0 $normal 0 0;
 
@@ -85,9 +125,11 @@
 
 .l-quarters-wide{
 	@extend .clearfix;
+	$column-padding: $normal;
+	$total-column-width: $wide-width - 3 * $column-padding;
 
 	& > div{
-		width: .25 * $wide-width - .75 * $normal;
+		width: .25 * $total-column-width;
 		float: left;
 		padding: 0 $normal 0 0;
 

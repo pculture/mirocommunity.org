@@ -1,95 +1,83 @@
 {% extends "mirocommunity_site/__base.html" %}
 
-{% block content %}
-<div id="basic_plan" class="clear">
-  <h1>Basic</h1>
-  <h2>(Completely Free)</h2>
-  <ul>
-    <li>Your own site, logo, &amp; background.</li>
-    <li>Up to <strong>500</strong> videos.</li>
-    <li>1 administrator account.</li>
-  </ul>
-  <a id="btn_started" href="/signup/step-two/basic">Get Started</a>
-</div><!-- // basic_plan -->
+{% block content-inner %}
+<div class="l-section l-quarters">
+  <div>
+    <h2>Basic</h2>
+    <h3>Completely Free</h3>
+    <ul>
+      <li>Your own site, logo, &amp; background.</li>
+      <li>Up to <strong>500</strong> videos.</li>
+      <li>1 administrator account.</li>
+    </ul>
+    <p><a href="/signup/step-two/basic">Get Started</a></p>
+  </div>
 
-<div id="starter_pack" class="plan">
-  <div class="hdr">
-    <h1>Plus</h1>
-    <h2>${{ params.NAME_TO_COST.plus }}/month</h2>
-  </div><!-- // hdr -->
-  <ul>
-    <li>Your site, logo &amp; background</li>
-    <li>Custom Domain</li>
-    <li>Custom CSS</li>
-    <li><strong>1,000</strong> Video Limit</li>
-    <li><strong>5</strong> Administrator Accounts</li>
-  </ul>
-  <div class="ft">
-    <a href="/signup/step-two/plus" class="start_trial">Start a 30 Day Free Trial</a>
-  </div><!-- // ft -->
-</div><!-- // starter_pack -->
+  <div>
+    <h2 class="accent">Plus</h2>
+    <h3>${{ params.NAME_TO_COST.plus }}/month</h3>
+    <ul>
+      <li>Your site, logo &amp; background</li>
+      <li>Custom Domain</li>
+      <li>Custom CSS</li>
+      <li><strong>1,000</strong> Video Limit</li>
+      <li><strong>5</strong> Administrator Accounts</li>
+    </ul>
+    <p><a href="/signup/step-two/plus">Start a 30 Day Free Trial</a></p>
+  </div>
 
-<div id="value_added" class="plan">
-  <div class="hdr">
-    <h1>Premium</h1>
-    <h2>${{ params.NAME_TO_COST.premium }}/month</h2>
-  </div><!-- // hdr -->
-  <ul>
-    <li>Your site, logo &amp; background</li>
-    <li>Custom Domain</li>
-    <li>Custom CSS</li>
-    <li><strong>5,000</strong> Video Limit</li>
-    <li><strong>Unlimited</strong> Administrator Accounts</li>
-    <li>You can run advertising</li>
-  </ul>
-  <div class="ft">
-    <a href="/signup/step-two/premium" class="start_trial">Start a 30 Day Free Trial</a>
-  </div><!-- // ft -->
-</div><!-- // value_added -->
+  <div>
+    <h2 class="accent">Premium</h2>
+    <h3>${{ params.NAME_TO_COST.premium }}/month</h3>
+    <ul>
+      <li>Your site, logo &amp; background</li>
+      <li>Custom Domain</li>
+      <li>Custom CSS</li>
+      <li><strong>5,000</strong> Video Limit</li>
+      <li><strong>Unlimited</strong> Administrator Accounts</li>
+      <li>You can run advertising</li>
+    </ul>
+    <p><a href="/signup/step-two/premium">Start a 30 Day Free Trial</a></p>
+  </div>
 
-<div id="delicious_plan" class="plan last">
-  <div class="hdr">
-    <h1>Max</h1>
-    <h2>${{ params.NAME_TO_COST.max }}/month</h2>
-  </div><!-- // hdr -->
-  <ul>
-    <li>Your site, logo &amp; background</li>
-    <li>Custom Domain</li>
-    <li>Custom CSS</li>
-    <li><strong>25,000</strong> Video Limit</li>
-    <li><strong>Unlimited</strong> Administrator Accounts</li>
-    <li>You can run advertising</li>
-    <li>Fully Custom Templating</li>
-  </ul>
-  <div class="ft">
-    <a href="/signup/step-two/max" class="start_trial">Start a 30 Day Free Trial</a>
-  </div><!-- // ft -->
-</div><!-- // delcisious_plan -->
+  <div>
+    <h2 class="accent">Max</h2>
+    <h3>${{ params.NAME_TO_COST.max }}/month</h3>
+    <ul>
+      <li>Your site, logo &amp; background</li>
+      <li>Custom Domain</li>
+      <li>Custom CSS</li>
+      <li><strong>25,000</strong> Video Limit</li>
+      <li><strong>Unlimited</strong> Administrator Accounts</li>
+      <li>You can run advertising</li>
+      <li>Fully Custom Templating</li>
+    </ul>
+    <p><a href="/signup/step-two/max">Start a 30 Day Free Trial</a></p>
+  </div>
+</div>
 
-<div id="additional_info">
-  <div class="clear">
-  <div id="local_community">
-    <h1>Calling Local Communities</h1>
-    <p>Are you creating a hyperlocal site for your city or town? If so, you might qualify for special rates! Please send us an email and let us know what you're up to: anne [at] pculture.org</p>
-  </div><!-- // local_community -->
-  <div id="enterprise_customer">
-    <h1>Are you an enterprise customer?</h1>
-    <p>Does your organization require a service level agreement, special hosting, a customized template, or additional features? Contact us to discuss your needs: anne [at] pculture.org</p>
-  </div><!-- // local_community -->
-  </div><!-- // clear -->
-</div><!-- // additional_info -->
+<div class='l-25-40-35'>
+  <div>
+    <h2>Calling Local Communities</h2>
+    <p>Are you creating a hyperlocal site for your city or town? If so, you might qualify for special rates! Please send us an email and let us know what you're up to: <a href="mailto:support@pculture.org">support@pculture.org</a></p>
+  </div>
 
-<div id="advantages">
-  <h1>Advantages of Miro Community</h1>
-  <ul class="clear">
-    <li id="domain"><span>Run a beautiful video presentation website on your own domain, without having to maintain the software.</span></li>
-    <li id="existing"><span>Works with your existing video hosting setup and workflow - no need to re-post videos.</span></li>
-    <li id="free"><span>Works with free video hosting services, if you don't already have videos online.</span></li>
-    <li id="variety"><span>Lets you bring together videos from a wide-variety of hosts and sources, into one curated experience.</span></li>
-    <li id="automatic"><span>Automatically import and publish RSS feeds of videos from any source.</span></li>
-    <!-- <li id="discussion"><span>Create a discussion space for video about your community; strengthen your relationships with your community.</span></li> -->
-    <li id="opensource"><span>Runs on open-source software.</span></li>
-  </ul>
-</div><!-- // advantages -->
+  <div>
+    <h2>Are you an enterprise customer?</h2>
+    <p>Does your organization require a service level agreement, special hosting, a customized template, or additional features? Contact us to discuss your needs: <a href="mailto:support@pculture.org">support@pculture.org</a></p>
+  </div>
+
+  <div>
+    <h2>Advantages of Miro Community</h2>
+    <ul>
+      <li>Run a beautiful video presentation website on your own domain, without having to maintain the software.</li>
+      <li>Works with your existing video hosting setup and workflow - no need to re-post videos.</li>
+      <li>Works with free video hosting services, if you don't already have videos online.</li>
+      <li>Lets you bring together videos from a wide-variety of hosts and sources, into one curated experience.</li>
+      <li>Automatically import and publish RSS feeds of videos from any source.</li>
+      <li>Runs on open-source software.</li>
+    </ul>
+  </div>
+</div>
 {% endblock %}
 
