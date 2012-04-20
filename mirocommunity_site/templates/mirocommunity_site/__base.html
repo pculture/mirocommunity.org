@@ -46,12 +46,12 @@
 				{% endblock %}
 			</div>
 			{% endblock %}
-
-			{% block footer %}
-				{% include "mirocommunity_site/_site_footer.html" %}
-			{% endblock %}
 		</div>
-	</div>{# /#main-wrap #}
+	</div>
+
+	{% block footer %}
+		{% include "mirocommunity_site/_site_footer.html" %}
+	{% endblock %}
 	
 	{% block foot-scripts %}
 	<script src="{{ STATIC_URL }}mirocommunity_site/js/jquery-1.7.2.min.js"></script>

@@ -123,7 +123,7 @@ header .logo { position: absolute; left: 10px; top: 30px; }
 #inner-wrap .signup-now:hover, #inner-wrap .signup-now:focus { opacity: 0.8; }
 
 /**  page-wrap  **/
-.floatpage { background-color: #f8f8f8; -moz-box-shadow: 0 0 20px -2px; -webkit-box-shadow: 0 0 20px -2px; -o-box-shadow: 0 0 20px -2px; box-shadow: 0 0 20px -2px; width: 858px; padding: 40px; margin: 100px auto 0; }
+.floatpage { background-color: #f8f8f8; -moz-box-shadow: 0 0 20px -2px; -webkit-box-shadow: 0 0 20px -2px; -o-box-shadow: 0 0 20px -2px; box-shadow: 0 0 20px -2px; width: 858px; padding: 40px 40px 90px 40px; margin: 100px auto -50px; }
 
 #page-wrap { clear: both; position: relative; top: -350px; z-index: 300; width: 100%; min-width: 960px; margin-bottom: -350px; }
 

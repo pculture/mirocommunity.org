@@ -123,8 +123,8 @@ header .logo { position: absolute; left: 10px; top: 30px; }
 	background-color:#f8f8f8;
 	@include box-shadow(0 0 20px -2px);
 	width: 858px;
-	padding: 40px;
-	margin: 100px auto 0;
+	padding: 40px 40px 90px 40px;
+	margin: 100px auto -50px;
 }
 #page-wrap {
 	clear: both;
