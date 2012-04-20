@@ -1,71 +1,56 @@
 {% extends "mirocommunity_site/__base.html" %}
 
-{% block content-wrap %}
-<div id="page-wrap">
-	<div class="top-shadow"></div>
+{% block content-inner %}
+<h1>Features you will love</h1>
+<div class="l-thirds">
+	<div>
+		<figure class="taped">
+			<img src="{{ STATIC_URL }}mirocommunity_site/images/youtube.png">
+		</figure>
+		<h3 class='l-center'>Integration &amp; Sharing</h3>
+	</div>
+	
+	<div>
+		<figure class="taped">
+			<img src="{{ STATIC_URL }}mirocommunity_site/images/lion.jpg">
+		</figure>
+		<h3>Elegant Video Presentation</h3>
+	</div>
+	
+	<div>
+		<figure class="taped">
+			<img class="features-image" src="{{ STATIC_URL }}mirocommunity_site/images/img3.jpg">
+		</figure>
+		<h3>Easy Video Management</h3>
+	</div>
+</div>
 
-	<div id="page-inner-wrap">
-		{% block content %}
-		<div id="features">
-			
-				<h1 class="title-big-thin">Features you will love:</h1>
-				<ul class="features-list">
-					<li>
-						<span class="grip"></span>
-						<a class="features-frame" href="#">
-							<img class="features-image" src="{{ STATIC_URL }}mirocommunity_site/images/youtube.png" alt="image">
-						</a>
-						<a class="feature-title" href="#">Integration &amp; Sharing</a>
-					</li>
-					
-					<li>
-						<span class="grip"></span>
-						<a class="features-frame" href="#">
-							<img class="features-image" src="{{ STATIC_URL }}mirocommunity_site/images/lion.jpg" alt="image">
-						</a>
-						<a class="feature-title" href="#">Elegant Video Presentation</a>
-					</li>
-					
-					<li>
-						<span class="grip"></span>
-						<a class="features-frame" href="#">
-							<img class="features-image" src="{{ STATIC_URL }}mirocommunity_site/images/img3.jpg" alt="image">
-						</a>
-						<a class="feature-title" href="#">Easy Video Management</a>
-					</li>
-					
-				</ul>
-
-				<ul class="features-detailed">
-					<li>
-						<a href="#"><img class="alignright  frame" src="{{ STATIC_URL }}mirocommunity_site/images/video-image.png" alt="image"></a>
-						<div class="feature-contents">
-							<h3><a href="#">Easy Video Management</a></h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis tempus arcu. Donec mollis, velit id pellentesque dignissim, velit justo eleifend leo, eu euismod ante erat at lorem. Aliquam metus leo, ornare ut hendrerit sed, pharetra eget ante. Phasellus commodo dictum libero. Morbi venenatis, ante ut tincidunt cursus, dui lacus cursus sapien, at semper eros elit quis velit. Etiam nibh felis ondimentum vitae egestas quis tincidunt vel velit. Donec pulvinar euismod porta. Aliquam leo erat, ultricies sit amet</p>
-							<a class="learn-more" href="#">Learn more about video management</a>
-						</div>
-					   
-					</li>
-					<li>
-						<a href="#"><img class="alignleft" src="{{ STATIC_URL }}mirocommunity_site/images/presentation-image.png"></a>
-						<div class="feature-contents">
-							<h3><a href="#">Elegant Video Presentation</a></h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis tempus arcu. Donec mollis, velit id pellentesque dignissim, velit justo eleifend leo, eu euismod ante erat at lorem. Aliquam metus leo, ornare ut hendrerit sed, pharetra eget ante. Phasellus commodo dictum libero. Morbi venenatis, ante ut tincidunt cursus, dui lacus cursus sapien, at semper eros elit quis velit. Etiam nibh felis ondimentum vitae egestas quis tincidunt vel velit. Donec pulvinar euismod porta. Aliquam leo erat, ultricies sit amet</p>
-							<a class="learn-more" href="#">Learn more about video presenting tools</a>
-						</div>
-						
-					</li>
-					<li>
-						 <a href="#"><img class="alignright top-margin" src="{{ STATIC_URL }}mirocommunity_site/images/share.png"></a>
-						<div class="feature-contents">
-							<h3><a href="#">Integrate &amp; Share</a></h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis tempus arcu. Donec mollis, velit id pellentesque dignissim, velit justo eleifend leo, eu euismod ante erat at lorem. Aliquam metus leo, ornare ut hendrerit sed, pharetra eget ante. Phasellus commodo dictum libero. Morbi venenatis, ante ut tincidunt cursus, dui lacus cursus sapien, at semper eros elit quis velit. Etiam nibh felis ondimentum vitae egestas quis tincidunt vel velit. Donec pulvinar euismod porta. Aliquam leo erat, ultricies sit amet</p>
-						</div>
-					   
-					</li>
-				</ul>{# /#features-detailed #}
-		</div>{# /#features #}
-		{% endblock %}
-	</div>{# /.page-inner-wrap #}
-</div>{# /#page-wrap #}
+<ul class="features-detailed">
+	<li>
+		<a href="#"><img class="alignright  frame" src="{{ STATIC_URL }}mirocommunity_site/images/video-image.png" alt="image"></a>
+		<div class="feature-contents">
+			<h3><a href="#">Easy Video Management</a></h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis tempus arcu. Donec mollis, velit id pellentesque dignissim, velit justo eleifend leo, eu euismod ante erat at lorem. Aliquam metus leo, ornare ut hendrerit sed, pharetra eget ante. Phasellus commodo dictum libero. Morbi venenatis, ante ut tincidunt cursus, dui lacus cursus sapien, at semper eros elit quis velit. Etiam nibh felis ondimentum vitae egestas quis tincidunt vel velit. Donec pulvinar euismod porta. Aliquam leo erat, ultricies sit amet</p>
+			<a class="learn-more" href="#">Learn more about video management</a>
+		</div>
+	   
+	</li>
+	<li>
+		<a href="#"><img class="alignleft" src="{{ STATIC_URL }}mirocommunity_site/images/presentation-image.png"></a>
+		<div class="feature-contents">
+			<h3><a href="#">Elegant Video Presentation</a></h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis tempus arcu. Donec mollis, velit id pellentesque dignissim, velit justo eleifend leo, eu euismod ante erat at lorem. Aliquam metus leo, ornare ut hendrerit sed, pharetra eget ante. Phasellus commodo dictum libero. Morbi venenatis, ante ut tincidunt cursus, dui lacus cursus sapien, at semper eros elit quis velit. Etiam nibh felis ondimentum vitae egestas quis tincidunt vel velit. Donec pulvinar euismod porta. Aliquam leo erat, ultricies sit amet</p>
+			<a class="learn-more" href="#">Learn more about video presenting tools</a>
+		</div>
+		
+	</li>
+	<li>
+		 <a href="#"><img class="alignright top-margin" src="{{ STATIC_URL }}mirocommunity_site/images/share.png"></a>
+		<div class="feature-contents">
+			<h3><a href="#">Integrate &amp; Share</a></h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis tempus arcu. Donec mollis, velit id pellentesque dignissim, velit justo eleifend leo, eu euismod ante erat at lorem. Aliquam metus leo, ornare ut hendrerit sed, pharetra eget ante. Phasellus commodo dictum libero. Morbi venenatis, ante ut tincidunt cursus, dui lacus cursus sapien, at semper eros elit quis velit. Etiam nibh felis ondimentum vitae egestas quis tincidunt vel velit. Donec pulvinar euismod porta. Aliquam leo erat, ultricies sit amet</p>
+		</div>
+	   
+	</li>
+</ul>{# /#features-detailed #}
 {% endblock %}

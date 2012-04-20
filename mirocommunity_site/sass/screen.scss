@@ -55,6 +55,24 @@ a:hover, a:active { outline: 0; }
 	position: relative;
 }
 
+/**  header  **/
+header {
+	height: 109px;
+	line-height: 110px;
+	border-bottom: 1px solid #313131;
+
+	.logo {
+		position: absolute; left: 10px; top: 30px;
+	}
+}
+	.nav { float: right; margin: 0 124px 0 0;}
+	.nav li { float: left; margin: 0  30px 0 0;}
+	.nav li a { font-family: "HelveticaNeueRegular", Arial, Helvetica, sans-serif; font-size: 14px; color: #546784; line-height: 21px; text-decoration: none;}
+	.nav li a:hover, .nav li a:focus , .nav li a.active { text-decoration: underline;} 
+
+	.create-site-btn{ position: absolute; top: 40px; right: 10px;}
+	.create-site-btn:hover, .create-site-btn:focus{ opacity: 0.8; }
+
 /** main  **/
 #main {
 	background: url(../images/banner-bg.png) repeat-x top left;
@@ -104,6 +122,12 @@ a:hover, a:active { outline: 0; }
 			background: url(../images/icons/heart.png) no-repeat left center;
 		}
 	}
+	h3{
+		font-family: "MuseoSlab500", Arial, Helvetica, sans-serif;
+		font-size: $large;
+		color: #333333;
+		font-weight: normal;
+	}
 
 	p, ul, ol, dl, blockquote{
 		color: #333333;
@@ -119,24 +143,24 @@ a:hover, a:active { outline: 0; }
 		list-style: decimal outside;
 	}
 }
-/**  header  **/
-header {
-	height: 109px;
-	line-height: 110px;
-	border-bottom: 1px solid #313131;
-}
-/**   logo **/
-header .logo { position: absolute; left: 10px; top: 30px; }
 
-/**  nav  **/
-.nav { float: right; margin: 0 124px 0 0;}
-.nav li { float: left; margin: 0  30px 0 0;}
-.nav li a { font-family: "HelveticaNeueRegular", Arial, Helvetica, sans-serif; font-size: 14px; color: #546784; line-height: 21px; text-decoration: none;}
-.nav li a:hover, .nav li a:focus , .nav li a.active { text-decoration: underline;} 
+	.taped{
+		position: relative;
+		padding-top: 14px;
 
-.create-site-btn{ position: absolute; top: 40px; right: 10px;}
-.create-site-btn:hover, .create-site-btn:focus{ opacity: 0.8; }
-
+		& > img{
+			max-width: 100%;
+		}
+		&:before{
+			content: "";
+			background: url(../images/tape.png) top center no-repeat;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 24px;
+		}
+	}
 
 /**  banner-wrap **/
 #banner-wrap { position: relative; height: 425px; overflow: hidden;/* background: url(../images/bg-banner.jpg) repeat-x; height: 425px; width: 100%; min-width: 960px; padding-top: 20px;*/}

@@ -6,6 +6,10 @@
 	float: right;
 	margin: 0 0 10px 38px;
 }
+.l-center{
+	text-align: center;
+	margin: 0 auto;
+}
 
 .l-section{
 	margin-bottom: $main-padding;
@@ -26,6 +30,8 @@
 }
 
 .l-60-40{
+	@extend .clearfix;
+
 	& > div{
 		width: .6 * $main-width - $main-padding;
 		float: left;
@@ -34,6 +40,20 @@
 		& + div{
 			width: .4 * $main-width - $main-padding;
 			padding: 0 0 0 $main-padding;
+		}
+	}
+}
+
+.l-thirds{
+	@extend .clearfix;
+
+	& > div{
+		width: .333 * $main-width - $main-padding;
+		float: left;
+		padding: 0 $main-padding 0 0;
+
+		&:last-child{
+			padding: 0;
 		}
 	}
 }
