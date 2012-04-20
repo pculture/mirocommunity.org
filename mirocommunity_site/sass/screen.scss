@@ -74,10 +74,10 @@ header {
 	.create-site-btn:hover, .create-site-btn:focus{ opacity: 0.8; }
 
 /** main  **/
-#main {
+.main {
 	background: url(../images/banner-bg.png) repeat-x top left;
 	min-width: 990px;
-	min-height: 428px;
+	min-height: 425px;
 	overflow: hidden;
 	position: relative;
 
@@ -194,30 +194,49 @@ header {
 		}
 	}
 
-/**  banner-wrap **/
-#banner-wrap { position: relative; height: 425px; overflow: hidden;/* background: url(../images/bg-banner.jpg) repeat-x; height: 425px; width: 100%; min-width: 960px; padding-top: 20px;*/}
+/**  banner **/
+.banner{
+	height: 425px;
+	overflow: hidden;
+	margin-bottom: $large;
 
-#banner-wrap #banner { position: relative; z-index: 140;  height: 405px; padding: 20px 0 0 0; margin: 0px auto; text-align: center; overflow: hidden; }
-#banner h1 { position: relative; z-index: 150;font-family: "GothamBookRegular",Arial, Helvetica, sans-serif; font-size: 48px; font-weight: normal; color: #fefefe; text-shadow: 2px 2px 13px  #000000; -moz-text-shadow: 2px 2px 3px #000000; -webkit-text-shadow: 2px 2px 13px #000000; -ms-text-shadow: 2px 2px 13px #000000; -o-text-shadow: 2px 2px 13px #000000;}
-#banner .banner-image { position: relative; z-index: 150; margin: 15px 0 0 0;}
-/*.banner-shadow { position: absolute; bottom: -18px; left: 0px; z-index:180;}*/
-.banner-shadow { position: relative; z-index: 400; bottom: 48px;  background:url(../images/banner-bottom-shadow2.png) no-repeat; width: 1033px; height: 35px; margin: 0px auto;}
-.lights { position: absolute; z-index: 120; top: 0px; background: url(../images/lights3.jpg) no-repeat; height: 190px; width: 1140px; margin: 0px auto; }
-.ie7 .lights { height: 0px;}
+	& > h1{
+		font-family: "GothamBookRegular",Arial, Helvetica, sans-serif;
+		font-size: $xxx-large;
+		font-weight: normal;
+		color: #fefefe;
+		@include text-shadow(2px 2px 13px #000000);
+		text-align: center;
+		margin: $normal 0;
+	}
+	& > img{
+		display: block;
+		margin: 0 auto;
+	}
+}
 
-/** contents-wrap **/
-#contents-wrap { clear: both; position: relative;   margin-bottom: 28px; padding-bottom: 10px;}
+	.banner-shadow{
+		position: relative;
 
+		&:after{
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: -15px;
+			left: 0;
+			width: 100%;
+			height: 35px;
+			background: url(../images/banner-bottom-shadow.png) no-repeat bottom center;
+		}
+	}
+//#banner-wrap { position: relative; height: 425px; overflow: hidden;/* background: url(../images/bg-banner.jpg) repeat-x; height: 425px; width: 100%; min-width: 960px; padding-top: 20px;*/}
+//
+//#banner-wrap #banner { position: relative; z-index: 140;  height: 405px; padding: 20px 0 0 0; margin: 0px auto; text-align: center; overflow: hidden; }
+//#banner h1 { position: relative; z-index: 150;font-family: "GothamBookRegular",Arial, Helvetica, sans-serif; font-size: 48px; font-weight: normal; color: #fefefe; text-shadow: 2px 2px 13px  #000000; -moz-text-shadow: 2px 2px 3px #000000; -webkit-text-shadow: 2px 2px 13px #000000; -ms-text-shadow: 2px 2px 13px #000000; -o-text-shadow: 2px 2px 13px #000000;}
+//#banner .banner-image { position: relative; z-index: 150; margin: 15px 0 0 0;}
+///*.banner-shadow { position: absolute; bottom: -18px; left: 0px; z-index:180;}*/
+//.banner-shadow { position: relative; z-index: 400; bottom: 48px;  background:url(../images/banner-bottom-shadow2.png) no-repeat; width: 1033px; height: 35px; margin: 0px auto;}
 
-
-/** inner-wrap   **/
-#contents-wrap #inner-wrap { width: 940px; padding: 20px 10px 30px 10px; margin: 0px auto;  font-weight: normal; color: #333333; }
-#inner-wrap  p { margin-bottom: 20px; line-height: 21px; font-weight: normal;}
-#inner-wrap .signup-now { float: right; margin: 0 40px 0 0;}
-#inner-wrap .signup-now:hover, #inner-wrap .signup-now:focus{ opacity: 0.8; }
-
-/**  page-wrap  **/
-// Can get rid of bg-top and bg-repeat.
 .floatpage{
 	background-color:#f8f8f8;
 	@include box-shadow(0 0 20px -2px);
@@ -225,19 +244,11 @@ header {
 	padding: 40px 40px 90px 40px;
 	margin: 100px auto -50px;
 }
-#page-wrap {
-	clear: both;
-	position: relative;
-	top: -350px;
-	z-index: 300;
-	width: 100%;
-	min-width: 960px;
-	margin-bottom: -350px;
-}
 
 .try-btn { float: right; margin: 0 25px 10px 0;}
+.signup-now { float: right; margin: 0 40px 0 0;}
 
-.create-your-site, .learn-more-btn, .host-btn, .try-btn{
+.create-your-site, .learn-more-btn, .host-btn, .try-btn, .signup-now{
 	&:hover, &:focus{opacity: 0.8;}
 }
 
