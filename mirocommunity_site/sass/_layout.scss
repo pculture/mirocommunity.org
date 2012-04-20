@@ -9,7 +9,6 @@
 
 .l-section{
 	margin-bottom: $main-padding;
-	@extend .clearfix;
 }
 
 .l-bordered-box{
@@ -17,6 +16,7 @@
 	position: relative;
 	background:url(../images/line.png) no-repeat 480px 40px;
 	border-top: #d4d4d4 solid 1px;
+	@extend .clearfix;
 
 	& > div{
 		& + div{
@@ -36,6 +36,20 @@
 
 		& + div{
 			width: .4 * $main-width - $main-padding;
+			padding: 0 0 0 $main-padding;
+		}
+	}
+}
+
+.l-50-50{
+	@extend .clearfix;
+
+	& > div{
+		width: .5 * $main-width - $main-padding;
+		float: left;
+		padding: 0 $main-padding 0 0;
+
+		& + div{
 			padding: 0 0 0 $main-padding;
 		}
 	}
