@@ -189,7 +189,7 @@ a:hover, a:active { outline: 0; }
  
 .box-container #benefits { overflow: hidden; width: 320px; float: right; margin: 0 25px 0 0;}
 #benefits h3 { background: url(../images/great-icon.png) no-repeat left center; padding-left: 30px; font-family: "MuseoSlab500", Arial, Helvetica, sans-serif; font-size: 34px; font-weight: normal; color: #db2c28; margin-bottom: 6px; }
-.box-container #benefits ul li { line-height: 25px;}
+.box-container #benefits ul li { line-height: 25px; background-position: left 9px; }
 
 /**  about-contents  **/
 #page-inner-wrap  #about-contents { }

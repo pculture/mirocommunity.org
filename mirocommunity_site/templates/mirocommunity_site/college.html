@@ -1,49 +1,44 @@
 {% extends "mirocommunity_site/__base.html" %}
-{% block body_id %}college{% endblock %}
-{% block content %}
-        	
-        	<div class="college_container">
 
-	<div class="college_masthead">A complete video portal for your school</div>
-	
-		<div style="float: left;">
-			<a href="http://ondemand.duke.edu/"><img src="/images/main.png" alt="Your school's complete video portal" style="margin-top: 16px;">
-		</div>
-	
-		<div class="college_masthead_images_side">
-			<a href="http://ondemand.duke.edu/"><img src="/images/side_thumb_1.png" alt="Bring together your departments"></a>
-			<span>Bring together your departments</span>
-	
-			<a href="http://ondemand.duke.edu/"><img src="/images/side_thumb_2.png" alt="Your iTunes U on the web"></a>
-			<span>Your iTunes U on the web</span>
-		</div>
-	
-	</div>
+{% block content-wrap %}
+<div id="page-wrap">
+	<div class="top-shadow"></div>
 
-</div>
+	<div id="page-inner-wrap">
+		{% block content %}
+			<a href="#"><img class="alignleft" src="{{ STATIC_URL }}mirocommunity_site/images/school-image.png" alt="college"></a>
+			<h2>Does Your School...?</h2>
+			<ul>
+				<li>Have a lot of relevant videos in many different places?</li>
+				<li>Want to better integrate video into your website? </li>
+				<li>Want flexible control over the branding of your video space?</li>
+				<li>Want to highlight student contributions in a controlled fashion?</li>
+				<li>Would rather keep viewers on your site than YouTube or Vimeo?</li>
+			</ul>
+			<a href="#"><img class="try-btn" src="{{ STATIC_URL }}mirocommunity_site/images/try-btn.png" alt="try"></a>
+			<h2 class="title-red">Managing the Explosive Growth of Media on Campus</h2>
+			<p>Every university community is producing increasing amounts of media - each major department may be making their own videos — possibly on YouTube, Vimeo, or other hosting sites — along with student groups, video lectures on iTunes U, and media appearances of faculty and students.</p>
+			<p>At the same time, universities face an increasingly competitive environment that requires creative solutions in order to capture the attention of and connect with prospective students and continue to engage alumni and donors. And all of this, in a time of exploding social media options, when controlling brand has become extremely difficult as conversations are distributed across the web. </p>
+			<p>You may be starting to feel like you’re in the business of having to constantly chase down media from all sides or letting it fall through the cracks. Or that you’re becoming a technology company in order to keep up with the quickly changing media landscape and the increasing demands around media management within your institution.</p>
+			
+			<div class="border-line"></div>
 
-	<div id="main">
-	<div id="main_left">
-		<h1>Your videos represent your school. Use them well.</h1>
-		<p> Get your videos on the web, without just sending people to YouTube.  Present your communications, lecture, and courseware videos on your own video website with Miro Community. Whether you are focused on videos for PR and communications, for 
-public events and lectures, or for courseware, your videos are a 
-representation of your school's reputation and community.  When you offer
- those videos on a YouTube page you are losing the chance to reinforce 
-your own community and brand.</p>
-		
-		<p>Does your college or university rely on iTunes U and YouTube for delivering your videos? The leading educational organizations don't.  We can help you do better. The TED Conference and MIT are two of the world's leading providers
- of educational videos.  It's not a surprise: both have excellent 
-internal technology teams and the have used that expertise to build 
-their own custom video sites, TED.com and MIT World.  <strong>Why would 
-these organizations invest the time and money to build video sites on 
-their own websites?</strong>  Because they know that when you send your 
-users off to iTunes or YouTube, you are weakening your viewers 
-connection to your school and your community.</p>
-		
-		<p>But most schools don't have the internal capacity to build a 
-world-class video website.  Miro Community gives you chance to setup 
-your own video presentation site on your own domain name for very little
- cost and no IT expenses (we host the site and keep the software up to 
-date).  The service is inexpensive and can be setup very quickly and 
-easily. Sign up for a free trial of a premium account <a href="http://mirocommunity.org/signup/">here</a>.</p>
+			<div class="box-container">
+				<div id="how-works">
+					<h3>How Does it Work?</h3>
+					<p>Miro Community allows you to run a beautiful video presentation website on your own domain, without having to maintain the software. It has advanced curation and moderation functions, is highly customizable, and doesn’t take a lot of time to manage or run.</p>
+				</div>
+				<div id="benefits">
+					<h3>Great Benefits</h3>
+					<ul>
+						<li>Site appears at your own domain</li>
+						<li>Customizable with your school’s branding</li>
+						<li>Import videos from any video site</li>
+						<li>Moderate videos and comments</li>
+					</ul>
+				</div>
+			</div>
+		{% endblock %}
+	</div>{# /.page-inner-wrap #}
+</div>{# /#page-wrap #}
 {% endblock %}
