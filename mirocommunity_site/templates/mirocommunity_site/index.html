@@ -1,33 +1,31 @@
 ﻿{% extends 'mirocommunity_site/__base.html' %}
 
-{% block content %}
-{% comment %}
-<figure>
-	<img src="/assets/images/banner.png" alt="Banner" title="The easiest way to make a video website" />
-	<a href="/signup/" title="Get started">Build a Video Community</a>
-</figure>
-{% endcomment %}
+{% block banner %}
+	<h1>The easiest way to make a video website</h1>
+	<img src="{{ STATIC_URL }}mirocommunity_site/images/banner.png">
+	<!--a href="/signup/" title="Get started">Build a Video Community</a-->
+{% endblock %}
 
-<h2>What makes miro community so powerful?</h2>
-<ul class="b_three">
+{% block content %}
+<h1>What makes miro community so powerful?</h1>
+<ul>
 	<li>
-		<img src="/assets/images/step_1.png" alt="image"/>
-		<h4>Setup is Easy, Beautiful and Fast</h4>
+		<img src="{{ STATIC_URL }}mirocommunity_site/images/step_1.png" alt="image"/>
+		<h3>Setup is Easy, Beautiful and Fast</h3>
 		<p>Set up a site in minutes - let us take case of updates and compatibility - no software to install. Can be used on any browser, on any computer. Works with all the best video hosts, including your own hosting - no need to change your workflow.</p>
 	</li>
 	<li>
-		<img src="/assets/images/step_2.png" alt="image"/>
-		<h4>Bring in Video from Everywhere</h4>
+		<img src="{{ STATIC_URL }}mirocommunity_site/images/step_2.png" alt="image"/>
+		<h3>Bring in Video from Everywhere</h3>
 		<p>Collect videos from YouTube, Vimeo, iTunes U, Blip or self-hosted sites for a one stop video experience. Include individual videos or add updating feeds to keep up with your sources without additional searching.</p>
 	</li>
-	<li class="l">
-		<img src="/assets/images/step_3.png" alt="image"/>
-		<h4>Quickly Curate Streams of Content</h4>
+	<li>
+		<img src="{{ STATIC_URL }}mirocommunity_site/images/step_3.png" alt="image"/>
+		<h3>Quickly Curate Streams of Content</h3>
 		<p>Review incoming videos, accept user submissions, and tag videos to fit your needs. There's no faster way to manage a video site - requires very little staff time to reach a high quality level.</p>
 	</li>	
 </ul>
-<div class="clear"></div>
-<ul class="s_four">
+<ul>
 	<li>
 		<span class="home"></span>
 		<h4>Local communities</h4>
@@ -43,14 +41,13 @@
 		<h4>Video contests</h4>
 		<p>Use our powerful platform to accept submissions and vote. <a href="http://whyopenedmatters.org/"> Example</a>.</p>
 	</li>
-	<li class="l">
+	<li>
 		<span class="vid"></span>
 		<h4>Video publishers</h4>
 		<p>Organize your videos for easy access and distribution.</p>
 	</li>
 	
 </ul>
-<div class="clear"></div>
 
 <section class="gallery sec">
 	<aside>
@@ -60,15 +57,15 @@
 	</aside>
 	<ul>
 		<li>
-			<a href="http://skiddplayer.com/"><img src="assets/images/gal_1.jpg" alt="image" /></a>
+			<a href="http://skiddplayer.com/"><img src="{{ STATIC_URL }}mirocommunity_site/images/gal_1.jpg" alt="image" /></a>
 			<p>SkiddPlayer</p>
 		</li>
 		<li>
-			<a href="http://whyopenedmatters.org/"><img src="assets/images/gal_2.jpg" alt="image" /></a>
+			<a href="http://whyopenedmatters.org/"><img src="{{ STATIC_URL }}mirocommunity_site/images/gal_2.jpg" alt="image" /></a>
 			<p>Creative Commons Contest</p>
 		</li>
 		<li class="l">
-			<a href="http://pittsburghonvideo.org/"><img src="assets/images/gal_3.jpg" alt="image" /></a>
+			<a href="http://pittsburghonvideo.org/"><img src="{{ STATIC_URL }}mirocommunity_site/images/gal_3.jpg" alt="image" /></a>
 			<p>Pittsburgh on Video</p>
 		</li>
 	</ul>
