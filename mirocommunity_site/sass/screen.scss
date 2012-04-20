@@ -166,7 +166,7 @@ header {
 		}
 	}
 
-	p, ul, ol, dl, blockquote{
+	p, ul, ol, dl, blockquote, label, input, select, button, span{
 		color: #333333;
 		font-size: $normal;
 		font-family: Helvetica, Tahoma, Arial, Geneva, sans-serif;
@@ -199,6 +199,13 @@ header {
 		font-weight: bold;
 	}
 }
+
+	.field{}
+		.field-help-text{
+			font-size: .9em;
+			padding-left: $normal;
+			font-style: italic;
+		}
 
 figure {}
 

@@ -131,7 +131,7 @@ header .logo { position: absolute; left: 10px; top: 30px; }
 .main h3.icon-parthenon { background: url(../images/icons/parthenon.png) no-repeat left top; }
 .main h3.icon-trophy { background: url(../images/icons/trophy.png) no-repeat left top; }
 .main h3.icon-movie-reel { background: url(../images/icons/movie-reel.png) no-repeat left top; }
-.main p, .main ul, .main ol, .main dl, .main blockquote { color: #333333; font-size: 14px; font-family: Helvetica, Tahoma, Arial, Geneva, sans-serif; line-height: 24px; margin-bottom: 14px; }
+.main p, .main ul, .main ol, .main dl, .main blockquote, .main label, .main input, .main select, .main button, .main span { color: #333333; font-size: 14px; font-family: Helvetica, Tahoma, Arial, Geneva, sans-serif; line-height: 24px; margin-bottom: 14px; }
 .main ul { list-style: square outside; }
 .main ol { list-style: decimal outside; }
 .main a { color: #43B3EE; text-decoration: none; }
@@ -139,6 +139,8 @@ header .logo { position: absolute; left: 10px; top: 30px; }
 .main a.wrapping { text-decoration: none; }
 .main em { font-style: italic; }
 .main strong { font-weight: bold; }
+
+.field-help-text { font-size: .9em; padding-left: 14px; font-style: italic; }
 
 figcaption { text-align: center; }
 

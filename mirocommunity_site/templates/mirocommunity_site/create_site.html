@@ -1,6 +1,8 @@
 {% extends "mirocommunity_site/__base.html" %}
 
-{% block content %}
+{% block content-inner %}
+<h1>Create a site</h1>
+
 {% with ff_template='mirocommunity_site/_form_field.html' %}
   <form method="post" action="{% url mirocommunity_site_create %}">
   {% csrf_token %}
@@ -9,45 +11,58 @@
     {{ form.non_field_errors }}
   {% endif %}
 
-  {% with field=form.tier_name %}{% include ff_template %}{% endwith %}
+    <div class='l-50-50 l-section'>
+      <div>
+        {% with field=form.tier_name %}{% include ff_template %}{% endwith %}
+      </div>
+      <div>
+        {% with field=form.domain prefield="http://" postfield=".mirocommunity.org" %}
+          {% include ff_template %}
+        {% endwith %}
+      </div>
+    </div>
+    <div class='l-50-50 l-section'>
+      <div>
+        <h2>Account Information</h2>
+        {% with field=form.username %}{% include ff_template %}{% endwith %}
+        {% with field=form.password1 %}{% include ff_template %}{% endwith %}
+        {% with field=form.password2 %}{% include ff_template %}{% endwith %}
+      </div>
 
-  <h1>Account Information</h1>
+      <div>
+        <h2>About you</h2>
 
+        {% with field=form.first_name %}{% include ff_template %}{% endwith %}
+        {% with field=form.last_name %}{% include ff_template %}{% endwith %}
+        {% with field=form.email %}{% include ff_template %}{% endwith %}
+      </div>
+    </div>
 
-  {% with field=form.username %}{% include ff_template %}{% endwith %}
-  {% with field=form.password1 %}{% include ff_template %}{% endwith %}
-  {% with field=form.password2 %}{% include ff_template %}{% endwith %}
+    <div class='l-50-50 l-section'>
+      <div>
+        <h2>Last steps</h2>
+        
+        <p>By clicking you agree to our <a href="/terms">Terms of Service</a> and <a target="_blank" href="http://pculture.org/pcf/websites-privacy/">Privacy Policy</a>.</p>
 
-  {% with field=form.domain prefield="http://" postfield=".mirocommunity.org" %}
-    {% include ff_template %}
+        <p>If you selected a tier that requires payment, we will send you to PayPal for your payment information.</p>
+
+        <button type="submit">Create My Account</button>
+      </div>
+
+      <div>
+        <h2>Advantages of Miro Community</h2>
+        <ul>
+          <li>Run a beautiful video presentation website on your own domain, without having to maintain the software.</li>
+          <li>Works with your existing video hosting setup and workflow - no need to re-post videos.</li>
+          <li>Works with free video hosting services, if you don't already have videos online.</li>
+          <li>Lets you bring together videos from a wide-variety of hosts and sources, into one curated experience.</li>
+          <li>Automatically import and publish RSS feeds of videos from any source.</li>
+          <li>Runs on open-source software.</li>
+        </ul>
+      </div>
+    </div>
+
+  </form>
   {% endwith %}
-
-  <h1>About you</h1>
-
-  {% with field=form.first_name %}{% include ff_template %}{% endwith %}
-  {% with field=form.last_name %}{% include ff_template %}{% endwith %}
-  {% with field=form.email %}{% include ff_template %}{% endwith %}
-
-  <h1>Last steps</h1>
-  
-  <p>By clicking you agree to our <a href="/terms">Terms of Service</a> and <a target="_blank" href="http://pculture.org/pcf/websites-privacy/">Privacy Policy</a>.</p>
-
-  <p>If you selected a tier that requires payment, we will send you to PayPal for your payment information.</p>
-
-  <button type="submit">Create My Account</button>
-</form>
-{% endwith %}
-
-<aside>
-  <h1>Advantages of Miro Community</h1>
-  <ul>
-    <li>Run a beautiful video presentation website on your own domain, without having to maintain the software.</li>
-    <li>Works with your existing video hosting setup and workflow - no need to re-post videos.</li>
-    <li>Works with free video hosting services, if you don't already have videos online.</li>
-    <li>Lets you bring together videos from a wide-variety of hosts and sources, into one curated experience.</li>
-    <li>Automatically import and publish RSS feeds of videos from any source.</li>
-    <li>Runs on open-source software.</li>
-  </ul>
-</aside>
 {% endblock %}
 

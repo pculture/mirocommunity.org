@@ -1,5 +1,7 @@
 {% extends "mirocommunity_site/__base.html" %}
 
+{% load url from future %}
+
 {% block content-inner %}
 <div class="l-section l-quarters">
   <div>
@@ -10,7 +12,7 @@
       <li>Up to <strong>500</strong> videos.</li>
       <li>1 administrator account.</li>
     </ul>
-    <p><a href="/signup/step-two/basic">Get Started</a></p>
+    <p><a href="{% url 'mirocommunity_site_create' tier_name='basic' %}">Get Started</a></p>
   </div>
 
   <div>
@@ -23,7 +25,7 @@
       <li><strong>1,000</strong> Video Limit</li>
       <li><strong>5</strong> Administrator Accounts</li>
     </ul>
-    <p><a href="/signup/step-two/plus">Start a 30 Day Free Trial</a></p>
+    <p><a href="{% url 'mirocommunity_site_create' tier_name='plus' %}">Start a 30 Day Free Trial</a></p>
   </div>
 
   <div>
@@ -37,7 +39,7 @@
       <li><strong>Unlimited</strong> Administrator Accounts</li>
       <li>You can run advertising</li>
     </ul>
-    <p><a href="/signup/step-two/premium">Start a 30 Day Free Trial</a></p>
+    <p><a href="{% url 'mirocommunity_site_create' tier_name='premium' %}">Start a 30 Day Free Trial</a></p>
   </div>
 
   <div>
@@ -52,7 +54,7 @@
       <li>You can run advertising</li>
       <li>Fully Custom Templating</li>
     </ul>
-    <p><a href="/signup/step-two/max">Start a 30 Day Free Trial</a></p>
+    <p><a href="{% url 'mirocommunity_site_create' tier_name='max' %}">Start a 30 Day Free Trial</a></p>
   </div>
 </div>
 

@@ -1,7 +1,7 @@
 <div class='field'>
-	<div class='field-label'>{{ field.label }}{% if field.help_text %} <span class='field-help-text'>{{ field.help_text }}</span>{% endif %}</div>
+	<div class='field-label'><label for="{{ field.id_for_label }}">{{ field.label }}{% if field.help_text %} <span class='field-help-text'>{{ field.help_text }}</span>{% endif %}</label></div>
 	<div class='field-field'>
-		{{ prefield }}{{ field }}{{ postfield }}
+		<span>{{ prefield }}</span>{{ field }}<span>{{ postfield }}</span>
 	</div>
 	{% if field.errors %}
 	<div class='field-errors'>
