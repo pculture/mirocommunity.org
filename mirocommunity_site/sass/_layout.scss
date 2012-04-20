@@ -1,0 +1,39 @@
+.l-floatleft{
+	float: left;
+	margin: 0 38px 10px 0;
+}
+.l-floatright{
+	float: right;
+	margin: 0 0 10px 38px;
+}
+
+.l-section{
+	margin-bottom: $main-padding;
+}
+
+.l-bordered-box{
+	padding-top: $main-padding;
+	position: relative;
+	background:url(../images/line.png) no-repeat 480px 40px;
+	border-top: #d4d4d4 solid 1px;
+
+	& > div{
+		& + div{
+			margin-left: -1px;
+			border-left: #d4d4d4 solid 1px;
+		}
+	}
+}
+
+.l-60-40{
+	& > div{
+		width: .6 * $main-width - $main-padding;
+		float: left;
+		padding: 0 $main-padding 0 0;
+
+		& + div{
+			width: .4 * $main-width - $main-padding;
+			padding: 0 0 0 $main-padding;
+		}
+	}
+}
