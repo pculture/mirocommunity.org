@@ -220,11 +220,6 @@ header {
 .try-btn { float: right; margin: 0 25px 10px 0;}
 .try-btn:hover, .try-btn:focus { opacity: 0.8;}
 
-/**  about-contents  **/
-#page-inner-wrap  #about-contents { }
-#page-inner-wrap  #about-contents .alignleft  {  float: left; margin: 30px 38px 10px 0;}
-#page-inner-wrap  #about-contents .alignright { float: right; margin: 30px 0 10px 38px;}
-
 /**  #find-solution  **/
 #find-solution { clear: both; overflow: hidden; background: url(../images/gradient-border.png) no-repeat top left; padding: 25px 0 18px 0;}
 #find-solution h3 { font-family: "MuseoSlab500", Arial, Helvetica, sans-serif; font-size: 24px; font-weight: normal;  margin-bottom: 6px;}
@@ -256,34 +251,6 @@ header {
 #page-inner-wrap #about-contents #pcf h3 a { color: #333333; text-decoration: none;}
 #page-inner-wrap #about-contents #pcf h3 a:hover, #page-inner-wrap #about-contents #pcf h3 a:hover { color: #999;}
 .host-btn:hover { opacity: 0.8;}
-
-/**  features   **/
-
-#page-inner-wrap #features { }
-
-#page-inner-wrap #features ul { margin: 0px; padding: 0px; list-style: none; margin-bottom: 20px;}
-#page-inner-wrap #features ul li { position: relative; background: none; margin: 0 7px 10px 0px; padding: 12px 0px 0 0px; }
-#page-inner-wrap #features ul li .grip { background:url(../images/holder.png) no-repeat; width: 93px; height: 24px; position: absolute; z-index:400; left: 32%; top: -1px;}
-#page-inner-wrap #features .features-list li { width: 281px; overflow: hidden; float: left; text-align: center;}
-#page-inner-wrap #features .features-list li .features-frame { overflow: hidden; display: table-cell; vertical-align: middle; background:url(../images/featured-img-frame2.png) no-repeat; width: 277px; height: 185px; padding: 2px 2px 2px 2px; }
-#page-inner-wrap #features .features-list li .features-frame img { height: 176px; max-width: 275px; margin-top: 2px; overflow: hidden; }
-#page-inner-wrap #features .features-list li .feature-title {font-family: "MuseoSlab500", Arial, Helvetica, sans-serif; font-size: 18px; color: #333333; text-decoration: none;}
-#page-inner-wrap #features .features-list li .feature-title:hover,#page-inner-wrap #features .features-list li .feature-title:focus { color: #999;}
-#page-inner-wrap #features .features-list li .feature-title:hover,
-#page-inner-wrap #features .features-list li .feature-title:focus {}
-
-.features-detailed {}
-.features-detailed h3 {font-family: "MuseoSlab500", Arial, Helvetica, sans-serif; font-size: 34px; font-weight: normal;  margin-bottom: 6px;}
-#page-inner-wrap .features-detailed h3 a { color: #333333; text-decoration: none;}
-#page-inner-wrap .features-detailed h3 a:hover, #page-inner-wrap .features-detailed h3 a:focus { color: #999;}
-#page-inner-wrap #features .features-detailed li { overflow: hidden; clear: both; margin-bottom: 50px;}
-#page-inner-wrap #features .features-detailed .alignleft { float: left; margin: 0 10px 10px 0;}
-#page-inner-wrap #features .features-detailed .alignright { float: right; margin: 0 0 10px 10px;}
-#page-inner-wrap #features .features-detailed li p { margin-bottom: 10px;}
-#page-inner-wrap #features .features-detailed li .learn-more { display: inline-block; font-family: "HelveticaNeueRegular",Arial, Helvetica, sans-serif; font-size: 12px; color: #555555; text-decoration: none; text-decoration: none; background: url(../images/featured-btn-bg.png) no-repeat; width: 220px; height: 29px; text-align: center; line-height: 26px;}
-#page-inner-wrap #features .features-detailed li .learn-more:hover { color: #333;}
-#page-inner-wrap #features .features-detailed li .top-margin { margin-top: 40px;}
-
 
 /**  support-wrap  **/
 #support-wrap {  min-width: 990px;  background: #f4f4f4; border-top: 1px solid #d4d4d4; border-bottom: 1px solid #d4d4d4;}
@@ -330,12 +297,3 @@ header {
 #footer  .footer-nav li a:hover, #footer  .footer-nav li a:focus { text-decoration: underline;}
 
 #footer h5 { float: right;font-family: "HelveticaNeuemMedium", Arial, Helvetica, sans-serif; font-size: 11px; color: #949494; font-weight: normal;}
-
-
-/**  page-wrap  **/
-
-#page-wrap { }
-
-/**  page-inner-wrap  **/
-#page-wrap #page-inner-wrap {/* background:url(../images/bg-repeat.png) repeat-y top center; width: 858px; min-height: 700px; padding: 40px 55px 45px 65px;  margin: 0px auto;*/}
-
