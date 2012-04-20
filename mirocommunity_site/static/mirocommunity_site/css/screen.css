@@ -93,6 +93,8 @@ a:hover, a:active { outline: 0; }
 #main h2.icon-tools { background: url(../images/icons/tools.png) no-repeat left 1px; }
 #main h2.icon-heart { background: url(../images/icons/heart.png) no-repeat left center; }
 #main p, #main ul, #main ol, #main dl, #main blockquote { color: #333333; font-size: 14px; font-family: Helvetica, Tahoma, Arial, Geneva, sans-serif; line-height: 24px; margin-bottom: 14px; }
+#main ul { list-style: square outside; }
+#main ol { list-style: decimal outside; }
 
 /**  header  **/
 header { height: 109px; line-height: 110px; border-bottom: 1px solid #313131; }

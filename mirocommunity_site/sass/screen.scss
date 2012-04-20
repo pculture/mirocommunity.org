@@ -112,6 +112,12 @@ a:hover, a:active { outline: 0; }
 		line-height: $x-large;
 		margin-bottom: $normal;
 	}
+	ul{
+		list-style: square outside;
+	}
+	ol{
+		list-style: decimal outside;
+	}
 }
 /**  header  **/
 header {
