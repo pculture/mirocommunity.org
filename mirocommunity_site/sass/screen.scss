@@ -146,19 +146,29 @@ header {
 
 	.taped{
 		position: relative;
-		padding-top: 14px;
+		margin: 14px 0 3 * $large;
 
-		& > img{
-			max-width: 100%;
-		}
+		height: 180px;
+		border:1px solid #C8CACE;
+		background: #E9ECEE;
+		@include border-radius(3px);
+		@include box-shadow(inset 0 0 0 2px #fff);
+
 		&:before{
 			content: "";
 			background: url(../images/tape.png) top center no-repeat;
 			position: absolute;
-			top: 0;
+			top: -14px;
 			left: 0;
 			width: 100%;
 			height: 24px;
+		}
+
+		& > h3{
+			position: absolute;
+			bottom: -2 * $large;
+			width: 100%;
+			text-align: center;
 		}
 	}
 

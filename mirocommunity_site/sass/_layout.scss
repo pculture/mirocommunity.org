@@ -6,13 +6,10 @@
 	float: right;
 	margin: 0 0 10px 38px;
 }
-.l-center{
-	text-align: center;
-	margin: 0 auto;
-}
 
 .l-section{
 	margin-bottom: $main-padding;
+	@extend .clearfix;
 }
 
 .l-bordered-box{
@@ -48,9 +45,9 @@
 	@extend .clearfix;
 
 	& > div{
-		width: .333 * $main-width - $main-padding;
+		width: .333 * $main-width - .66 * $normal;
 		float: left;
-		padding: 0 $main-padding 0 0;
+		padding: 0 $normal 0 0;
 
 		&:last-child{
 			padding: 0;
