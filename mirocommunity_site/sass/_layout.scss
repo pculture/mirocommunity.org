@@ -55,26 +55,6 @@
 	}
 }
 
-.l-25-40-35{
-	@extend .clearfix;
-	$column-padding: 3 * $normal;
-	$total-column-width: $main-width - 2 * $column-padding;
-
-	& > div{
-		width: .4 * $total-column-width;
-		float: left;
-		padding: 0 $column-padding 0 0;
-
-		&:last-child{;
-			padding: 0;
-			width: .35 * $total-column-width;
-		}
-		&:first-child{
-			width: .25 * $total-column-width;
-		}
-	}
-}
-
 .l-thirds{
 	@extend .clearfix;
 	$column-padding: $normal;
@@ -83,7 +63,23 @@
 	& > div{
 		width: .333 * $total-column-width;
 		float: left;
-		padding: 0 $normal 0 0;
+		padding: 0 $column-padding 0 0;
+
+		&:last-child{
+			padding: 0;
+		}
+	}
+}
+
+.l-thirds-padded{
+	@extend .clearfix;
+	$column-padding: 4 * $normal;
+	$total-column-width: $main-width - 2 * $column-padding;
+
+	& > div{
+		width: .333 * $total-column-width;
+		float: left;
+		padding: 0 $column-padding 0 0;
 
 		&:last-child{
 			padding: 0;
@@ -99,7 +95,7 @@
 	& > div{
 		width: .333 * $total-column-width;
 		float: left;
-		padding: 0 $normal 0 0;
+		padding: 0 $column-padding 0 0;
 
 		&:last-child{
 			padding: 0;
@@ -115,7 +111,7 @@
 	& > div{
 		width: .25 * $total-column-width;
 		float: left;
-		padding: 0 $normal 0 0;
+		padding: 0 $column-padding 0 0;
 
 		&:last-child{
 			padding: 0;
@@ -131,7 +127,7 @@
 	& > div{
 		width: .25 * $total-column-width;
 		float: left;
-		padding: 0 $normal 0 0;
+		padding: 0 $column-padding 0 0;
 
 		&:last-child{
 			padding: 0;

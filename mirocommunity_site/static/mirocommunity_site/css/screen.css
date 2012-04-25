@@ -43,12 +43,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .l-50-50 > div { width: 389px; float: left; padding: 0 40px 0 0; }
 .l-50-50 > div + div { padding: 0 0 0 40px; }
 
-.l-25-40-35 > div { width: 309.6px; float: left; padding: 0 42px 0 0; }
-.l-25-40-35 > div:last-child { padding: 0; width: 270.9px; }
-.l-25-40-35 > div:first-child { width: 193.5px; }
-
 .l-thirds > div { width: 276.39px; float: left; padding: 0 14px 0 0; }
 .l-thirds > div:last-child { padding: 0; }
+
+.l-thirds-padded > div { width: 248.418px; float: left; padding: 0 56px 0 0; }
+.l-thirds-padded > div:last-child { padding: 0; }
 
 .l-thirds-wide > div { width: 310.356px; float: left; padding: 0 14px 0 0; }
 .l-thirds-wide > div:last-child { padding: 0; }
@@ -88,11 +87,11 @@ a:focus { outline: thin dotted; }
 a:hover, a:active { outline: 0; }
 
 /** Contain floats: h5bp.com/q **/
-.clearfix:before, .l-bordered-box:before, .l-60-40:before, .l-50-50:before, .l-25-40-35:before, .l-thirds:before, .l-thirds-wide:before, .l-quarters:before, .l-quarters-wide:before, .clearfix:after, .l-bordered-box:after, .l-60-40:after, .l-50-50:after, .l-25-40-35:after, .l-thirds:after, .l-thirds-wide:after, .l-quarters:after, .l-quarters-wide:after { content: ""; display: table; }
+.clearfix:before, .l-bordered-box:before, .l-60-40:before, .l-50-50:before, .l-thirds:before, .l-thirds-padded:before, .l-thirds-wide:before, .l-quarters:before, .l-quarters-wide:before, .clearfix:after, .l-bordered-box:after, .l-60-40:after, .l-50-50:after, .l-thirds:after, .l-thirds-padded:after, .l-thirds-wide:after, .l-quarters:after, .l-quarters-wide:after { content: ""; display: table; }
 
-.clearfix:after, .l-bordered-box:after, .l-60-40:after, .l-50-50:after, .l-25-40-35:after, .l-thirds:after, .l-thirds-wide:after, .l-quarters:after, .l-quarters-wide:after { clear: both; }
+.clearfix:after, .l-bordered-box:after, .l-60-40:after, .l-50-50:after, .l-thirds:after, .l-thirds-padded:after, .l-thirds-wide:after, .l-quarters:after, .l-quarters-wide:after { clear: both; }
 
-.clearfix, .l-bordered-box, .l-60-40, .l-50-50, .l-25-40-35, .l-thirds, .l-thirds-wide, .l-quarters, .l-quarters-wide { *zoom: 1; }
+.clearfix, .l-bordered-box, .l-60-40, .l-50-50, .l-thirds, .l-thirds-padded, .l-thirds-wide, .l-quarters, .l-quarters-wide { *zoom: 1; }
 
 .container { width: 960px; height: 100%; margin: 0 auto; position: relative; }
 
