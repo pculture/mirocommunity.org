@@ -58,7 +58,7 @@ class SiteCreationForm(forms.ModelForm):
 
     def _log_file(self):
         return open(os.path.join(settings.PROJECT_ROOT,
-                                '{domain}.txt'.format(self.cleaned_data)),
+                                '{domain}.txt'.format(**self.cleaned_data)),
                     'a')
 
     def save(self):
