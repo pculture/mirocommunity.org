@@ -62,10 +62,45 @@ header {
 		position: absolute; left: 10px; top: 30px;
 	}
 }
-	.nav { float: right; margin: 0 124px 0 0;}
-	.nav li { float: left; margin: 0  30px 0 0;}
-	.nav li a { font-family: "HelveticaNeueRegular", Arial, Helvetica, sans-serif; font-size: 14px; color: #546784; line-height: 21px; text-decoration: none;}
-	.nav li a:hover, .nav li a:focus , .nav li a.active { text-decoration: underline;} 
+	.nav{
+		float: right;
+
+		& > li{
+			float: left;
+			margin: 0 30px 0 0;
+
+			& > a{
+				font-family: "HelveticaNeueRegular", Arial, Helvetica, sans-serif;
+				font-size: 14px;
+				color: #546784;
+				line-height: 21px;
+				text-decoration: none;
+
+				&:hover, &:focus, &.active{
+					text-decoration: underline;
+				}
+			}
+
+			&.accent > a{
+				background-color: $red-accent;
+				padding: 5px 10px;
+				color: #fff;
+				font-family: Helvetica, Tahoma, Arial, Geneva, sans-serif;
+				font-size: 12px;
+				@include border-radius(3px);
+				border-top: 1px solid lighten($red-accent, 30%);
+				@include box-shadow(0 0 0 1px $red-accent, 1px 1px 2px #333);
+				letter-spacing: 0.1em;
+
+				&:hover, &:focus{
+					opacity: 0.8
+				};
+				&:hover, &:focus, &.active{
+					text-decoration: none;
+				}
+			}
+		}
+	}
 
 	.create-site-btn{ position: absolute; top: 40px; right: 10px;}
 	.create-site-btn:hover, .create-site-btn:focus{ opacity: 0.8; }

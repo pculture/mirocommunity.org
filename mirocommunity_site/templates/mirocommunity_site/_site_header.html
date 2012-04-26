@@ -1,13 +1,10 @@
-<!-- Logo -->
+{% load url from future %}
 <a href="/"><img class="logo" src="{{ STATIC_URL }}mirocommunity_site/images/logo.png" alt="MiroCommunity"></a>
 
-<!-- Nav -->
 <ul class="nav">
-	<li><a href="/features/">Features</a></li>
-	<li><a href="/college/">Universities</a></li>
-	<li><a href="/local-media/">Local Media</a></li>
-	<li><a href="/enterprise/">Enterprise Services</a></li>
+	<li>{% with url="/features/" text="Features" %}{% include "mirocommunity_site/_nav_link.html" %}{% endwith %}</li>
+	<li>{% with url="/college/" text="Universities" %}{% include "mirocommunity_site/_nav_link.html" %}{% endwith %}</li>
+	<li>{% with url="/local-media/" text="Local Media" %}{% include "mirocommunity_site/_nav_link.html" %}{% endwith %}</li>
+	<li>{% with url="/enterprise/" text="Enterprise Services" %}{% include "mirocommunity_site/_nav_link.html" %}{% endwith %}</li>
+	<li class='accent'>{% url 'mirocommunity_site_pricing' as url %}{% with text="Pricing" %}{% include "mirocommunity_site/_nav_link.html" %}{% endwith %}</li>
 </ul>
-<!-- End of .nav -->
-
-<a href="/signup/"><img class="create-site-btn" src="{{ STATIC_URL }}mirocommunity_site/images/create-btn.png" alt="Create a site"></a>

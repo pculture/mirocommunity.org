@@ -1,0 +1,1 @@
+<a{% if request.path == url %} class="active"{% else %} class="{{ request.path }}"{% endif %} href="{{ url }}">{{ text }}</a>
