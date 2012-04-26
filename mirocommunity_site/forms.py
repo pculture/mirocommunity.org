@@ -51,7 +51,7 @@ class SiteCreationForm(forms.ModelForm):
     def clean_domain(self):
         domain = self.cleaned_data['domain']
         if os.path.exists(os.path.join(
-            settings.MIROCOMMUNITY_SITE_CREATION_ROOT,
+            settings.PROJECT_ROOT,
             '{0}_project'.format(domain))):
             raise forms.ValidationError('A site already exists with that name.')
         return domain
