@@ -11,6 +11,12 @@ from mirocommunity_site.utils.shell import check_output
 class SiteCreationView(FormView):
     form_class = SiteCreationForm
 
+    def get_initial(self):
+        # HACK until we're using django 1.4.
+        initial = super(SiteCreationView, self).get_initial().copy()
+        initial.update({'tier_name': self.request.GET.get('tier_name')})
+        return initial
+
     def form_valid(self, form):
         form.save()
 
@@ -35,7 +41,4 @@ class SiteCreationView(FormView):
         #        getattr(settings, 'PROJECT_SCRIPT', None) and
         #        getattr(settings, 'PROJECT_REDIRECT_SCRIPT', None)):
         #    raise Http404
-        kwargs['tier_name'] = kwargs.get('tier_name', 'basic')
-        if not kwargs['tier_name'] in NAME_TO_COST:
-            raise Http404("Unknown tier.")
         return super(SiteCreationView, self).dispatch(request, *args, **kwargs)
