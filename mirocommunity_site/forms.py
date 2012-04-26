@@ -67,7 +67,7 @@ class SiteCreationForm(forms.ModelForm):
         # future - for example, django 1.4 project templates. -SB
         with self._log_file() as out:
             subprocess.check_call([settings.PROJECT_SCRIPT,
-                                   self.cleaned_data['url']],
+                                   self.cleaned_data['domain']],
                                   stdout=out,
                                   stderr=out,
                                   env={

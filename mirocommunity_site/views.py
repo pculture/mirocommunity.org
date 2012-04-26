@@ -24,11 +24,12 @@ class SiteCreationView(FormView):
         with form._log_file() as out:
             target_url = check_output(
                 [settings.PROJECT_REDIRECT_SCRIPT,
-                 form.cleaned_data['url']],
+                 form.cleaned_data['domain']],
                 stderr=out,
                 env={
                     'DJANGO_SETTINGS_MODULE':
-                        form.cleaned_data['url'] + '_project.settings',
+                        '{domain}_project.settings'.format(
+                            **form.cleaned_data),
                     'NEW_TIER_NAME': form.cleaned_data['tier_name'],
                     'NEW_USERNAME': form.cleaned_data['username'],
                     'NEW_PASSWORD': form.cleaned_data['password1'],
