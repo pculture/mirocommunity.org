@@ -48,17 +48,18 @@ class SiteCreationForm(forms.ModelForm):
             raise forms.ValidationError(_("The two password fields didn't match."))
         return password2
 
-    def clean_url(self):
-        url = self.cleaned_data['url']
+    def clean_domain(self):
+        domain = self.cleaned_data['domain']
         if os.path.exists(os.path.join(
             settings.MIROCOMMUNITY_SITE_CREATION_ROOT,
-            '{0}_project'.format(url))):
+            '{0}_project'.format(domain))):
             raise forms.ValidationError('A site already exists with that name.')
-        return url
+        return domain
 
     def _log_file(self):
-        return file(os.path.join(settings.PROJECT_ROOT,
-                         '%(url)s.txt' % self.cleaned_data), 'a')
+        return open(os.path.join(settings.PROJECT_ROOT,
+                                '{domain}.txt'.format(self.cleaned_data)),
+                    'a')
 
     def save(self):
         # For backwards-compatibility, we use the same process as the previous
