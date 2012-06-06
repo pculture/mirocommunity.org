@@ -20,6 +20,7 @@ class SiteCreationForm(forms.ModelForm):
         ('max', _('Max ${cost}/mo'.format(cost=NAME_TO_COST['max'])))
     )
     domain = forms.RegexField(r'^[a-z0-9][a-z0-9-]*$',
+                              max_length=30,
                               label=_('Site name'),
                               help_text=_('Letters a-z, numbers, and hyphens only.'))
     tier_name = forms.ChoiceField(label=_('Selected Plan'),
