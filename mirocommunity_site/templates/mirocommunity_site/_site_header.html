@@ -1,5 +1,5 @@
-{% load url from future %}
-<a href="/"><img class="logo" src="{{ STATIC_URL }}mirocommunity_site/images/logo.png" alt="MiroCommunity"></a>
+{% load url from future %}{% load static from staticfiles %}
+<a href="/"><img class="logo" src="{% static 'mirocommunity_site/images/logo.png' %}" alt="MiroCommunity"></a>
 
 <ul class="nav">
 	<li>{% with url="/features/" text="Features" %}{% include "mirocommunity_site/_nav_link.html" %}{% endwith %}</li>

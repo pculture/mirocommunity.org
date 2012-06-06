@@ -1,11 +1,12 @@
 ﻿{% extends 'mirocommunity_site/__base.html' %}
+{% load static from staticfiles %}
 
 {% block title %}{{ block.super }}: The easiest way to create a video site or contest{% endblock %}
 
 {% block pre-content %}
 	<figure class="banner">
 		<h1>The easiest way to make a video website</h1>
-		<img src="{{ STATIC_URL }}mirocommunity_site/images/content/index/banner.png">
+		<img src="{% static 'mirocommunity_site/images/content/index/banner.png' %}">
 	</figure>
 {% endblock %}
 
@@ -16,21 +17,21 @@
 	<div class='l-thirds-wide l-section'>
 		<div>
 			<figure class='framed'>
-				<img src="{{ STATIC_URL }}mirocommunity_site/images/content/index/setup.png">
+				<img src="{% static 'mirocommunity_site/images/content/index/setup.png' %}">
 			</figure>
 			<h3>Setup is Easy, Beautiful and Fast</h3>
 			<p>Set up a site in minutes - let us take case of updates and compatibility - no software to install. Can be used on any browser, on any computer. Works with all the best video hosts, including your own hosting - no need to change your workflow.</p>
 		</div>
 		<div>
 			<figure class='framed'>
-				<img src="{{ STATIC_URL }}mirocommunity_site/images/content/index/sources.png">
+				<img src="{% static 'mirocommunity_site/images/content/index/sources.png' %}">
 			</figure>
 			<h3>Bring in Video from Everywhere</h3>
 			<p>Collect videos from YouTube, Vimeo, iTunes U, Blip or self-hosted sites for a one stop video experience. Include individual videos or add updating feeds to keep up with your sources without additional searching.</p>
 		</div>
 		<div>
 			<figure class='framed'>
-				<img src="{{ STATIC_URL }}mirocommunity_site/images/content/index/curate.png">
+				<img src="{% static 'mirocommunity_site/images/content/index/curate.png' %}">
 			</figure>
 			<h3>Quickly Curate Streams of Content</h3>
 			<p>Review incoming videos, accept user submissions, and tag videos to fit your needs. There's no faster way to manage a video site - requires very little staff time to reach a high quality level.</p>
@@ -66,7 +67,7 @@
 			<a class="wrapping" href="http://skiddplayer.com/">
 				<figure>
 					<div class='framed'>
-						<img src="{{ STATIC_URL }}mirocommunity_site/images/gal_1.jpg">
+						<img src="{% static 'mirocommunity_site/images/gal_1.jpg' %}">
 					</div>
 					<figcaption><h3>SkiddPlayer</h3></figcaption>
 				</figure>
@@ -76,7 +77,7 @@
 			<a class="wrapping" href="http://whyopenedmatters.org/">
 				<figure>
 					<div class='framed'>
-						<img src="{{ STATIC_URL }}mirocommunity_site/images/gal_2.jpg">
+						<img src="{% static 'mirocommunity_site/images/gal_2.jpg' %}">
 					</div>
 					<figcaption><h3>Creative Commons Contest</h3></figcaption>
 				</figure>
@@ -86,7 +87,7 @@
 			<a class="wrapping" href="http://pittsburghonvideo.org/">
 				<figure>
 					<div class='framed'>
-						<img src="{{ STATIC_URL }}mirocommunity_site/images/gal_3.jpg">
+						<img src="{% static 'mirocommunity_site/images/gal_3.jpg' %}">
 					</div>
 					<figcaption><h3>Pittsburgh on Video</h3></figcaption>
 				</figure>

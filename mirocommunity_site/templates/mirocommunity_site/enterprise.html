@@ -1,4 +1,5 @@
 ﻿{% extends "mirocommunity_site/__base.html" %}
+{% load static from staticfiles %}
 
 {% block title %}Enterprise Services — {{ block.super }}{% endblock %}
 
@@ -8,7 +9,7 @@
 	<div class="l-section clearfix">
 		<a href="http://pittsburghonvideo.org/" title="The Pittsburgh Foundation's Pittsburgh on Video">
 			<figure class='framed l-floatleft'>
-				<img src="{{ STATIC_URL }}mirocommunity_site/images/content/enterprise/pittsburgh.jpg">
+				<img src="{% static 'mirocommunity_site/images/content/enterprise/pittsburgh.jpg' %}">
 			</figure>
 		</a>
 		<h2>Customization, Design and Branding</h2>
@@ -19,7 +20,7 @@
 	<div class="l-section clearfix">
 		<a href="http://ondemand.duke.edu/" title="Duke University's Duke on Demand">
 			<figure class='framed l-floatright'>
-				<img src="{{ STATIC_URL }}mirocommunity_site/images/content/enterprise/duke.jpg">
+				<img src="{% static 'mirocommunity_site/images/content/enterprise/duke.jpg' %}">
 			</figure>
 		</a>
 		<h2>Security and Stability</h2>
@@ -29,7 +30,7 @@
 	<div class="l-section clearfix">
 		<a href="http://wiredforchangeremix.org/" title="Wired for Change Remix Contest">
 			<figure class="l-floatleft framed">
-				<img src="{{ STATIC_URL }}mirocommunity_site/images/content/enterprise/wired-for-change.jpg">
+				<img src="{% static 'mirocommunity_site/images/content/enterprise/wired-for-change.jpg' %}">
 			</figure>
 		</a>
 		<h2>Fast and Thorough Support</h2>

@@ -1,4 +1,5 @@
 {% extends "mirocommunity_site/__base.html" %}
+{% load static from staticfiles %}
 
 {% block title %}About — {{ block.super }}{% endblock %}
 
@@ -7,13 +8,13 @@
 
 <div class='l-section'>
 	<h2>Miro Community in a Nutshell</h2>
-	<img class="l-floatright" src="{{ STATIC_URL }}mirocommunity_site/images/content/about/nutshell.png">
+	<img class="l-floatright" src="{% static 'mirocommunity_site/images/content/about/nutshell.png' %}">
 	<p>Most organizations don’t have a single outlet for videos, and with Miro Community that’s fine - you get the benefits of exposure on YouTube, iTunes U, and wherever else you publish, without needing to re-host centrally.</p>
 	<p>Miro Community gives you leverage: it’s a simple way to manage 10,000+ videos, no matter where they are hosted. You get a branded video portal that: is tailored to you, drives SEO directly to your site, and integrates with your existing web strategy.</p>
 </div>
 
 <div class='l-section'>
-	<img class="l-floatleft" src="{{ STATIC_URL }}mirocommunity_site/images/content/about/background.png">
+	<img class="l-floatleft" src="{% static 'mirocommunity_site/images/content/about/background.png' %}">
 	<h2>Background</h2>
 	<p>Miro Community began with a focus on building local video communities in a time when local news outlets were shrinking while more and more people and organizations turned to online video to present their grassroots experiences. With a generous grant from the Knight Foundation, the Participatory Culture Foundation set out to give any community a chance to provide a local portal to community video content. Along the way, Miro Community transformed into something much broader - a way for any community or organization to easily manage an ever increasing amount of relevant video and create focused spaces around their topic of interest.</p>
 </div>
@@ -23,23 +24,23 @@
 	<div>
 		<h2 class="icon-wide icon-www">Create a Hosted Site</h2>
 		<p>Designed to be easy for anyone to create and maintain, with our freemium hosted service you get up to 25,000 videos and never have to worry about handling updates or maintenance. No special servers needed - embed videos from across the web. A light-weight solution for those with limited branding needs or their own design team.</p>
-		<a href="/pricing/"><img class="create-your-site" src="{{ STATIC_URL }}mirocommunity_site/images/create-site-btn.png" alt="Create your site"></a>
+		<a href="/pricing/"><img class="create-your-site" src="{% static 'mirocommunity_site/images/create-site-btn.png' %}" alt="Create your site"></a>
 	</div>
 	<div>
 		<h2 class="icon-wide icon-businessmen">Sign Up for Enterprise</h2>
 		<p>We also offer enterprise services, where we’ll work with you to develop a branded custom theme for your site, provide a SLA, and even develop custom features as needed. This option includes unlimited videos. Enterprise sites are offered a private sandbox to test out updates and design changes.</p>
-		<a href="mailto:enterprise@pculture.org"><img class="learn-more-btn" src="{{ STATIC_URL }}mirocommunity_site/images/learn-blue-btn.png" alt="Contact us to learn more"></a>
+		<a href="mailto:enterprise@pculture.org"><img class="learn-more-btn" src="{% static 'mirocommunity_site/images/learn-blue-btn.png' %}" alt="Contact us to learn more"></a>
 	</div>
 </div>
 
 <div class='l-section'>
 	<h2 class="icon-wide icon-monitor">Host your own instance</h2>
 	<p>Miro Community is proudly free and open source software, provided under the AGPL3 license. You are welcome to download and install our code, available at our GitHub repo. You can even adapt it to fit your needs. This license is share-alike, meaning you must provide the source code for any adaptations you make (this does not apply to custom themes). You will likely need people familiar with Python in order to successfully install.</p>
-	<a href="http://github.com/pculture/mirocommunity"><img class="host-btn" src="{{ STATIC_URL }}mirocommunity_site/images/host-black-btn.png" alt="Host your own"></a>
+	<a href="http://github.com/pculture/mirocommunity"><img class="host-btn" src="{% static 'mirocommunity_site/images/host-black-btn.png' %}" alt="Host your own"></a>
 </div>
 
 <div class='l-section l-bordered-box'>
-	<img class="l-floatright" src="{{ STATIC_URL }}mirocommunity_site/images/pcf.png" alt="pcf">
+	<img class="l-floatright" src="{% static 'mirocommunity_site/images/pcf.png' %}" alt="pcf">
 	<h2>The Participatory Culture Foundation</h2>
 	<p>Miro Community is a project of the Participatory Culture Foundation (PCF), a 501c3 non-profit organization, which is dedicated to supporting a democratic media by creating open and decentralized video tools and services. We work to eliminate gatekeepers and empower communities around the world. Learn more at <a href="http://pculture.org">pculture.org</a></p>
 </div>

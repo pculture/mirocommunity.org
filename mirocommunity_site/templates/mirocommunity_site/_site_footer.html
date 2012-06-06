@@ -1,14 +1,14 @@
-	<div id="support-wrap">
+	<div id="support-wrap">{% load static from staticfiles %}
 		<div id="support-features">
 			<div id="social">
-				<a href="/"><img class="footer-logo" src="{{ STATIC_URL }}mirocommunity_site/images/logo-footer.png" alt="MiroCommunity"></a>
+				<a href="/"><img class="footer-logo" src="{% static 'mirocommunity_site/images/logo-footer.png' %}" alt="MiroCommunity"></a>
 				<div id="connect">
 					<h3>Connect With Us</h3>
 					<ul class="social-nav">
-						<li><a href="#"><img src="{{ STATIC_URL }}mirocommunity_site/images/twitter.png" alt="twitter"></a></li>
-						<li><a href="#"><img src="{{ STATIC_URL }}mirocommunity_site/images/facebook.png" alt="facebook"></a></li>
-						<li><a href="#"><img src="{{ STATIC_URL }}mirocommunity_site/images/plus.png" alt="google"></a></li>
-						<li><a href="#"><img src="{{ STATIC_URL }}mirocommunity_site/images/tumblr.png" alt="tumblr"></a></li>
+						<li><a href="#"><img src="{% static 'mirocommunity_site/images/twitter.png' %}" alt="twitter"></a></li>
+						<li><a href="#"><img src="{% static 'mirocommunity_site/images/facebook.png' %}" alt="facebook"></a></li>
+						<li><a href="#"><img src="{% static 'mirocommunity_site/images/plus.png' %}" alt="google"></a></li>
+						<li><a href="#"><img src="{% static 'mirocommunity_site/images/tumblr.png' %}" alt="tumblr"></a></li>
 					</ul>
 				</div><!-- End of #connect -->
 
