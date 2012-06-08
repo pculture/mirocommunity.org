@@ -45,6 +45,10 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mirocommunity_site',
+    # We need to have access to the Tier model.
+    'mirocommunity_saas',
+    # And thus we need paypal.
+    'paypal.standard.ipn',
 )
 
 ROOT_URLCONF = 'mirocommunity_site.urls'
@@ -61,5 +65,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 # - DATABASES
 # - logging/tracing settings (if applicable)
 # - PROJECT_ROOT
-# - PROJECT_SCRIPT
-# - PROJECT_REDIRECT_SCRIPT
+# - PROJECT_TEMPLATE - see django project creation templating
+# - PROJECT_NAMESPACE - use this for dev/staging/prod namespacing.
+# - PROJECT_POST_CREATION_SCRIPT - this does anything secret before site creation.

@@ -13,10 +13,10 @@
 
     <div class='l-50-50 l-section'>
       <div>
-        {% with field=form.tier_name %}{% include ff_template %}{% endwith %}
+        {% with field=form.tier %}{% include ff_template %}{% endwith %}
       </div>
       <div>
-        {% with field=form.domain prefield="http://" postfield=".mirocommunity.org" %}
+        {% with field=form.site_name prefield="http://" postfield=".mirocommunity.org" %}
           {% include ff_template %}
         {% endwith %}
       </div>

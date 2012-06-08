@@ -6,26 +6,36 @@ from django import forms
 from django.conf import settings
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
-from localtv.tiers import Tier
+from mirocommunity_saas.models import Tier
+
+from mirocommunity_site.utils.projects import (create_project,
+                                               _project_name,
+                                               _mysql_database_name,
+                                               create_mysql_database,
+                                               syncdb,
+                                               initialize)
 
 
-NAME_TO_COST = Tier.NAME_TO_COST()
+class TierChoiceField(forms.models.ModelChoiceField):
+    def label_from_instance(self, obj):
+        if obj.price == 0:
+            return "{name} (free of cost)".format(name=obj.name)
+        return "{name} ${price}/mo".format(name=obj.name, price=obj.price)
 
 
 class SiteCreationForm(forms.ModelForm):
-    TIER_CHOICES = (
-        ('basic', _('Basic (free of cost)')),
-        ('plus', _('Plus ${cost}/mo'.format(cost=NAME_TO_COST['plus']))),
-        ('premium', _('Premium ${cost}/mo'.format(cost=NAME_TO_COST['premium']))),
-        ('max', _('Max ${cost}/mo'.format(cost=NAME_TO_COST['max'])))
-    )
-    domain = forms.RegexField(r'^[a-z0-9][a-z0-9-]*$',
-                              max_length=30,
-                              label=_('Site name'),
-                              help_text=_('Letters a-z, numbers, and hyphens only.'))
-    tier_name = forms.ChoiceField(label=_('Selected Plan'),
-                                  required=True,
-                                  choices=TIER_CHOICES)
+    site_name = forms.RegexField(r'^[a-z0-9][a-z0-9-]*$',
+                                 max_length=20,
+                                 label=_('Site name'),
+                                 help_text=_('Letters a-z, numbers, and '
+                                             'hyphens only.'))
+    tier = TierChoiceField(queryset=Tier.objects.filter(slug__in=['basic',
+                                                                  'plus',
+                                                                  'premium',
+                                                                  'max']
+                                               ).order_by('price'),
+                           label=_('Selected Plan'),
+                           required=True)
     first_name = forms.CharField(label=_('First name'))
     last_name = forms.CharField(label=_('Last name'))
     username = forms.RegexField(r'^[\w0-9_]+$',
@@ -49,32 +59,42 @@ class SiteCreationForm(forms.ModelForm):
             raise forms.ValidationError(_("The two password fields didn't match."))
         return password2
 
-    def clean_domain(self):
-        domain = self.cleaned_data['domain']
+    def clean_site_name(self):
+        site_name = self.cleaned_data['site_name']
         if os.path.exists(os.path.join(
             settings.PROJECT_ROOT,
-            '{0}_project'.format(domain))):
+            _project_name(site_name))):
             raise forms.ValidationError('A site already exists with that name.')
-        return domain
-
-    def _log_file(self):
-        return open(os.path.join(settings.PROJECT_ROOT,
-                                '{domain}.txt'.format(**self.cleaned_data)),
-                    'a')
+        return site_name
 
     def save(self):
-        # For backwards-compatibility, we use the same process as the previous
-        # code, with the hope to replace it with something more sane in the
-        # future - for example, django 1.4 project templates. -SB
-        with self._log_file() as out:
-            subprocess.check_call([settings.PROJECT_SCRIPT,
-                                   self.cleaned_data['domain']],
-                                  stdout=out,
-                                  stderr=out,
-                                  env={
-                    'DJANGO_SETTINGS_MODULE':
-                        os.environ['DJANGO_SETTINGS_MODULE'],
-                    'NEW_TIER_NAME': self.cleaned_data['tier_name'],
-                    'NEW_USERNAME': self.cleaned_data['username'],
-                    'NEW_PASSWORD': self.cleaned_data['password1'],
-                    'NEW_EMAIL': self.cleaned_data['email']})
+        site_name = self.cleaned_data['site_name']
+        create_project(site_name)
+
+        default_db = settings.DATABASES['default']
+        if default_db['ENGINE'] == 'django.db.backends.sqlite3':
+            pass
+        elif default_db['ENGINE'] == 'django.db.backends.mysql':
+            database_name = _mysql_database_name(site_name)
+            create_mysql_database(database_name)
+        else:
+            raise ValueError("Unhandled database.")
+
+        syncdb(site_name)
+
+        redirect = initialize(site_name,
+                              username=self.cleaned_data['username'],
+                              email=self.cleaned_data['email'],
+                              password=self.cleaned_data['password1'],
+                              tier=self.cleaned_data['tier'].slug)
+
+        # At this point, the site is initialized; the post-creation script
+        # can figure out tier/settings/etc by checking, so we don't need to
+        # pass any of that in. We just need to run it as if from the new site.
+        if getattr(settings, 'PROJECT_POST_CREATION_SCRIPT', None):
+            project_name = _project_name(site_name)
+            subprocess.check_call([settings.PROJECT_POST_CREATION_SCRIPT],
+                                  env={'DJANGO_SETTINGS_MODULE':
+                                         '{0}.settings'.format(project_name)})
+
+        return redirect

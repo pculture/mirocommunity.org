@@ -6,58 +6,30 @@
 
 {% block content-inner %}
 <div class="l-section l-quarters">
-  <div>
-    <h2>Basic</h2>
-    <h3>Completely Free</h3>
-    <ul>
-      <li>Your own site, logo, &amp; background.</li>
-      <li>Up to <strong>500</strong> videos.</li>
-      <li>1 administrator account.</li>
-    </ul>
-    <p><a href="{% url 'mirocommunity_site_create' %}">Get Started</a></p>
-  </div>
-
-  <div>
-    <h2 class="accent">Plus</h2>
-    <h3>${{ params.NAME_TO_COST.plus }}/month</h3>
-    <ul>
-      <li>Your site, logo &amp; background</li>
-      <li>Custom Domain</li>
-      <li>Custom CSS</li>
-      <li><strong>1,000</strong> Video Limit</li>
-      <li><strong>5</strong> Administrator Accounts</li>
-    </ul>
-    <p><a href="{% url 'mirocommunity_site_create' %}?tier_name=plus">Start a 30 Day Free Trial</a></p>
-  </div>
-
-  <div>
-    <h2 class="accent">Premium</h2>
-    <h3>${{ params.NAME_TO_COST.premium }}/month</h3>
-    <ul>
-      <li>Your site, logo &amp; background</li>
-      <li>Custom Domain</li>
-      <li>Custom CSS</li>
-      <li><strong>5,000</strong> Video Limit</li>
-      <li><strong>Unlimited</strong> Administrator Accounts</li>
-      <li>You can run advertising</li>
-    </ul>
-    <p><a href="{% url 'mirocommunity_site_create' %}?tier_name=premium">Start a 30 Day Free Trial</a></p>
-  </div>
-
-  <div>
-    <h2 class="accent">Max</h2>
-    <h3>${{ params.NAME_TO_COST.max }}/month</h3>
-    <ul>
-      <li>Your site, logo &amp; background</li>
-      <li>Custom Domain</li>
-      <li>Custom CSS</li>
-      <li><strong>25,000</strong> Video Limit</li>
-      <li><strong>Unlimited</strong> Administrator Accounts</li>
-      <li>You can run advertising</li>
-      <li>Fully Custom Templating</li>
-    </ul>
-    <p><a href="{% url 'mirocommunity_site_create' %}?tier_name=max">Start a 30 Day Free Trial</a></p>
-  </div>
+  {% for tier in tiers %}
+    <div>
+      <h2{% if tier.price %} class="accent"{% endif %}>{{ tier.name }}</h2>
+      <h3>{% if tier.price %}${{ tier.price }}/month{% else %}Completely free{% endif %}</h3>
+      <ul>
+        <li>Your site, logo &amp; background</li>
+        {% if tier.custom_domain %}
+          <li>Custom domain</li>
+        {% endif %}
+        {% if tier.custom_css %}
+          <li>Custom CSS</li>
+        {% endif %}
+        <li><strong>{% if tier.video_limit %}{{ tier.video_limit }}{% else %}Unlimited{% endif %}</strong> videos</li>
+        <li><strong>{% if tier.admin_limit == 0 or tier.admin_limit %}{{ tier.admin_limit|add:1 }}{% else %}Unlimited{% endif %}</strong> administrator account{% if tier.admin_limit != 0 %}s{% endif %}</li>
+        {% if tier.ads_allowed %}
+          <li>You can run advertising</li>
+        {% endif %}
+        {% if tier.custom_themes %}
+          <li>Fully custom templating</li>
+        {% endif %}
+      </ul>
+      <p><a href="{% url 'mirocommunity_site_create' %}?tier_name={{ tier.slug }}">Start a 30 Day Free Trial</a></p>
+    </div>
+  {% endfor %}
 </div>
 
 <div class='l-thirds-padded'>

@@ -16,11 +16,9 @@
 # along with Miro Community.  If not, see <http://www.gnu.org/licenses/>.
 
 from django.conf.urls.defaults import url, patterns
-from django.template import TemplateDoesNotExist
 from django.views.generic import TemplateView
-from django.http import Http404
 
-from mirocommunity_site.views import (NAME_TO_COST, SiteCreationView)
+from mirocommunity_site.views import SiteCreationView, PricingView
 
 
 urlpatterns = patterns("",
@@ -31,9 +29,8 @@ urlpatterns = patterns("",
         SiteCreationView.as_view(template_name='mirocommunity_site/create_site.html'),
         name='mirocommunity_site_create'),
     url(r'^pricing/$',
-        TemplateView.as_view(template_name='mirocommunity_site/pricing.html'),
-        {'NAME_TO_COST': NAME_TO_COST},
-        'mirocommunity_site_pricing'),
+        PricingView.as_view(template_name='mirocommunity_site/pricing.html'),
+        name='mirocommunity_site_pricing'),
 
     url(r'^local-media/$',
         TemplateView.as_view(template_name='mirocommunity_site/local-media.html')),
