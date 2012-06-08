@@ -11,7 +11,7 @@ from mirocommunity_site.utils.shell import check_output
 
 
 def _project_name(site_name):
-    return '{0}_project'.format(site_name)
+    return '{0}_project'.format(site_name.replace('-', '_'))
 
 
 def create_project(site_name, **kwargs):
