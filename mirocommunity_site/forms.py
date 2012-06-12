@@ -14,6 +14,7 @@ from mirocommunity_site.utils.projects import (create_project,
                                                create_mysql_database,
                                                syncdb,
                                                initialize)
+from mirocommunity_site.signals import post_creation
 
 
 class TierChoiceField(forms.models.ModelChoiceField):
@@ -88,13 +89,8 @@ class SiteCreationForm(forms.ModelForm):
                               password=self.cleaned_data['password1'],
                               tier=self.cleaned_data['tier'].slug)
 
-        # At this point, the site is initialized; the post-creation script
-        # can figure out tier/settings/etc by checking, so we don't need to
-        # pass any of that in. We just need to run it as if from the new site.
-        if getattr(settings, 'PROJECT_POST_CREATION_SCRIPT', None):
-            project_name = _project_name(site_name)
-            subprocess.check_call([settings.PROJECT_POST_CREATION_SCRIPT],
-                                  env={'DJANGO_SETTINGS_MODULE':
-                                         '{0}.settings'.format(project_name)})
+        # At this point, the site is initialized; we send a post-creation
+        # signal so that you can hook into this process.
+        post_creation.send(sender=self, site_name=site_name)
 
         return redirect
