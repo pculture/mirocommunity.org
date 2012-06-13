@@ -27,7 +27,7 @@
           <li>Fully custom templating</li>
         {% endif %}
       </ul>
-      <p><a href="{% url 'mirocommunity_site_create' %}?tier_name={{ tier.slug }}">Start a 30 Day Free Trial</a></p>
+      <p><a href="{% url 'mirocommunity_site_create' %}?tier_name={{ tier.slug }}">{% if tier.price %}Start a 30 Day Free Trial{% else %}Get Started{% endif %}</a></p>
     </div>
   {% endfor %}
 </div>
