@@ -12,7 +12,12 @@ class SiteCreationView(FormView):
 
     def get_initial(self):
         initial = super(SiteCreationView, self).get_initial()
-        initial.update({'tier': self.request.GET.get('tier')})
+        try:
+            tier = Tier.objects.get(slug=self.request.GET.get('tier'))
+        except Tier.DoesNotExist:
+            pass
+        else:
+            initial.update({'tier': tier})
         return initial
 
     def form_valid(self, form):
