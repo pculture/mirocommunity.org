@@ -6,6 +6,7 @@ import subprocess
 import sys
 
 from django.conf import settings
+from django.core.management import call_command
 
 from mirocommunity_site.utils.shell import check_output
 
@@ -14,10 +15,10 @@ def _project_name(site_name):
     return '{0}_project'.format(site_name.replace('-', '_'))
 
 
-def create_project(site_name, **kwargs):
+def create_project(site_name):
     """
-    :param project_name: The name of the project to be created. This will be
-                         created within ``settings.PROJECT_ROOT``.
+    :param site_name: The name of the site to be created. It will be created
+                      within ``settings.PROJECT_ROOT``.
 
     Any additional keyword arguments will be passed to the startproject
     command and enter the template context.
@@ -32,16 +33,12 @@ def create_project(site_name, **kwargs):
         raise ValueError
     os.mkdir(project_dir)
 
-    cmdline = ['django-admin.py', 'startproject']
+    options = {}
     template_path = getattr(settings, 'PROJECT_TEMPLATE', None)
     if template_path is not None:
-        cmdline.append('--template={0}'.format(template_path))
+        options['template'] = template_path
 
-    for key, value in kwargs.iteritems():
-        cmdline.append('--{0}={1}'.format(key, value))
-
-    cmdline.extend([project_name, project_dir])
-    subprocess.check_call(cmdline)
+    call_command('startproject', project_name, project_dir, **options)
 
 
 def _mysql_database_name(site_name):
