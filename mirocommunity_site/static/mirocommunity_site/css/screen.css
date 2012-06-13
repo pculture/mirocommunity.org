@@ -34,7 +34,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .l-section { margin-bottom: 40px; }
 
-.l-bordered-box { padding-top: 40px; position: relative; background: url(../images/line.png) no-repeat 480px 40px; border-top: #d4d4d4 solid 1px; }
+.l-bordered-box { padding-top: 40px; position: relative; border-top: #d4d4d4 solid 1px; }
 .l-bordered-box > div + div { margin-left: -1px; border-left: #d4d4d4 solid 1px; }
 
 .l-60-40 > div { width: 474.8px; float: left; padding: 0 40px 0 0; }
