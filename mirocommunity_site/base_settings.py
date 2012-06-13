@@ -67,4 +67,3 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 # - PROJECT_ROOT
 # - PROJECT_TEMPLATE - see django project creation templating
 # - PROJECT_NAMESPACE - use this for dev/staging/prod namespacing.
-# - PROJECT_POST_CREATION_SCRIPT - this does anything secret before site creation.
