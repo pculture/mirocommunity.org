@@ -64,6 +64,13 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 # - STATIC_ROOT
 # - DATABASES
 # - logging/tracing settings (if applicable)
-# - PROJECT_ROOT
-# - PROJECT_TEMPLATE - see django project creation templating
-# - PROJECT_NAMESPACE - use this for dev/staging/prod namespacing.
+# - SITE_CREATION_ROOT
+# - SITE_CREATION_TEMPLATE - see django project creation templating
+# - SITE_CREATION_NAMESPACE - use this for dev/staging/prod namespacing.
+# - SITE_CREATION_PYTHON - A path to a specific python executable. If this
+#                          and SITE_CREATION_DJANGO_ADMIN are provided, they
+#                          will be used for site creation.
+# - SITE_CREATION_DJANGO_ADMIN - A path to a specific django-admin.py
+#                                file. If this and SITE_CREATION_PYTHON are
+#                                provided, they will be used for site
+#                                creation.

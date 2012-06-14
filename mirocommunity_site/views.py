@@ -25,9 +25,7 @@ class SiteCreationView(FormView):
         return HttpResponseRedirect(target_url)
 
     #def dispatch(self, request, *args, **kwargs):
-    #    if not (getattr(settings, 'PROJECT_ROOT', None) and
-    #            getattr(settings, 'PROJECT_SCRIPT', None) and
-    #            getattr(settings, 'PROJECT_REDIRECT_SCRIPT', None)):
+    #    if not getattr(settings, 'SITE_CREATION_ROOT', None):
     #        raise Http404
     #    return super(SiteCreationView, self).dispatch(request, *args, **kwargs)
 

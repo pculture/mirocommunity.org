@@ -63,7 +63,7 @@ class SiteCreationForm(forms.ModelForm):
     def clean_site_name(self):
         site_name = self.cleaned_data['site_name']
         if os.path.exists(os.path.join(
-            settings.PROJECT_ROOT,
+            settings.SITE_CREATION_ROOT,
             _project_name(site_name))):
             raise forms.ValidationError('A site already exists with that name.')
         return site_name

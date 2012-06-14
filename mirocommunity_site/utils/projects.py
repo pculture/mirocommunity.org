@@ -18,13 +18,13 @@ def _project_name(site_name):
 def create_project(site_name):
     """
     :param site_name: The name of the site to be created. It will be created
-                      within ``settings.PROJECT_ROOT``.
+                      within ``settings.SITE_CREATION_ROOT``.
 
     Any additional keyword arguments will be passed to the startproject
     command and enter the template context.
 
     """
-    project_root = settings.PROJECT_ROOT
+    project_root = settings.SITE_CREATION_ROOT
     project_name = _project_name(site_name)
     project_dir = os.path.join(project_root, project_name)
     if os.path.exists(project_dir):
@@ -34,7 +34,7 @@ def create_project(site_name):
     os.mkdir(project_dir)
 
     options = {}
-    template_path = getattr(settings, 'PROJECT_TEMPLATE', None)
+    template_path = getattr(settings, 'SITE_CREATION_TEMPLATE', None)
     if template_path is not None:
         options['template'] = template_path
 
@@ -73,37 +73,50 @@ def create_mysql_database(database_name):
 
 
 def syncdb(site_name):
-    sys.path.insert(0, settings.PROJECT_ROOT)
+    sys.path.insert(0, settings.SITE_CREATION_ROOT)
     project_name = _project_name(site_name)
     project_settings = __import__('{0}.settings'.format(
                                                     project_name)).settings
     del sys.path[0]
 
-    cmdline = ['django-admin.py',
-               'syncdb',
-               '--settings={0}.settings'.format(project_name),
-               '--noinput']
+    python = getattr(settings, 'SITE_CREATION_PYTHON', '')
+    django_admin = getattr(settings, 'SITE_CREATION_DJANGO_ADMIN', '')
+    if python and django_admin:
+        cmdline = [python, django_admin]
+    else:
+        cmdline = ['django-admin.py']
+
+    cmdline.extend(['syncdb',
+                    '--settings={0}.settings'.format(project_name),
+                    '--noinput'])
     if 'south' in project_settings.INSTALLED_APPS:
         cmdline.append('--all')
 
     env = os.environ.copy()
-    env['PYTHONPATH'] = settings.PROJECT_ROOT
+    env['PYTHONPATH'] = settings.SITE_CREATION_ROOT
     subprocess.check_call(cmdline, env=env)
 
 
 def initialize(site_name, username='', email='', password='',
                tier='basic'):
     settings_module = '{0}.settings'.format(_project_name(site_name))
-    cmdline = ['django-admin.py',
-               'initialize',
-               site_name,
-               '--settings={0}'.format(settings_module),
-               '--tier={0}'.format(tier)]
+
+    python = getattr(settings, 'SITE_CREATION_PYTHON', '')
+    django_admin = getattr(settings, 'SITE_CREATION_DJANGO_ADMIN', '')
+    if python and django_admin:
+        cmdline = [python, django_admin]
+    else:
+        cmdline = ['django-admin.py']
+
+    cmdline.extend(['initialize',
+                    site_name,
+                    '--settings={0}'.format(settings_module),
+                    '--tier={0}'.format(tier)])
     if username:
         cmdline.extend(['--username={0}'.format(username),
                         '--email={0}'.format(email),
                         '--password={0}'.format(password)])
     env = os.environ.copy()
-    env['PYTHONPATH'] = settings.PROJECT_ROOT
+    env['PYTHONPATH'] = settings.SITE_CREATION_ROOT
     output = check_output(cmdline, env=env)
     return output.rsplit('\n', 1)[1]
