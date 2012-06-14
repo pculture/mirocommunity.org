@@ -15,6 +15,13 @@ def _project_name(site_name):
     return '{0}_project'.format(site_name.replace('-', '_'))
 
 
+def _site_domain(site_name):
+    namespace = getattr(settings, 'SITE_CREATION_NAMESPACE', '')
+    return "{site_name}.{namespace}{dot}mirocommunity.org".format(
+                            site_name=site_name, namespace=namespace,
+                            dot='.' if namespace else '')
+
+
 def create_project(site_name):
     """
     :param site_name: The name of the site to be created. It will be created
@@ -46,7 +53,7 @@ def _mysql_database_name(site_name):
     Given a site name, returns a database name for that site.
 
     """
-    namespace = getattr(settings, 'PROJECT_NAMESPACE', '')
+    namespace = getattr(settings, 'SITE_CREATION_NAMESPACE', '')
     prefix = '{0}_'.format(namespace) if namespace else ''
     return '{prefix}miro_community_{site_name}'.format(
                     prefix=prefix, site_name=site_name)
@@ -110,6 +117,7 @@ def initialize(site_name, username='', email='', password='',
 
     cmdline.extend(['initialize',
                     site_name,
+                    _site_domain(site_name),
                     '--settings={0}'.format(settings_module),
                     '--tier={0}'.format(tier)])
     if username:
