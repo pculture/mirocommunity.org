@@ -90,7 +90,8 @@ def syncdb(site_name):
     if syncdb_sql:
         if (settings.DATABASES['default']['ENGINE'] ==
             'django.db.backends.mysql'):
-            _run_mysql_command('SOURCE {0}'.format(syncdb_sql))
+            _run_mysql_command('SOURCE {0}'.format(syncdb_sql),
+                               database=_mysql_database_name(site_name))
             return
         else:
             raise ValueError("Unhandled database for sql import.")
