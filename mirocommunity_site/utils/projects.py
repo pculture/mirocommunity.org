@@ -59,27 +59,41 @@ def _mysql_database_name(site_name):
                     prefix=prefix, site_name=site_name)
 
 
+def _run_mysql_command(command, **kwargs):
+    """
+    Runs the given MySQL command with the current server.
+    """
+    cmdline = ['mysql']
+    default_db = settings.DATABASES['default']
+    options = {}
+    for setting in ('HOST', 'PORT', 'USER', 'PASSWORD'):
+        val = default_db.get(setting)
+        if val:
+            options[setting.lower()] = val
+    options.update(kwargs)
+    for opt, val in options.iteritems():
+        cmdline.append('--{0}={1}'.format(opt, val))
+    cmdline.extend(['-e', command])
+    subprocess.check_call(cmdline)
+
+
 def create_mysql_database(database_name):
     """
     :param database_name: The name of the database being created.
 
     """
-    cmdline = ['mysql']
-    default_db = settings.DATABASES['default']
-    for opt, setting in (
-        ('--host', 'HOST'),
-        ('--port', 'PORT'),
-        ('--user', 'USER'),
-        ('--password', 'PASSWORD')):
-        val = default_db.get(setting)
-        if val:
-            cmdline.append('{0}={1}'.format(opt, val))
-    cmdline.extend(['-e', 'CREATE DATABASE '
-                    '`{0}`'.format(database_name)])
-    subprocess.check_call(cmdline)
+    _run_mysql_command('CREATE DATABASE `{0}`'.format(database_name))
 
 
 def syncdb(site_name):
+    syncdb_sql = getattr(settings, 'SITE_CREATION_SYNCDB_SQL', '')
+    if syncdb_sql:
+        if (settings.DATABASES['default']['ENGINE'] ==
+            'django.db.backends.mysql'):
+            _run_mysql_command('SOURCE {0}'.format(syncdb_sql))
+            return
+        else:
+            raise ValueError("Unhandled database for sql import.")
     sys.path.insert(0, settings.SITE_CREATION_ROOT)
     project_name = _project_name(site_name)
     project_settings = __import__('{0}.settings'.format(
