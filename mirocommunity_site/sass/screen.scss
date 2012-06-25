@@ -348,14 +348,6 @@ figure {}
 #social #connect { overflow: hidden; float: left; margin: 0 28px 0 0;}
 #social #connect li { float: left; margin-right: 5px;}
 #social #connect li:hover { opacity: 0.8;}
-/** newsletter  **/
-#social #newsletter { float:left;}
-#social #newsletter p { float: left;}
-#newsletter p.email-input-container { overflow: hidden; background:url(../images/email-input-bg.png) no-repeat; width: 173px; height: 22px; padding: 2px 5px 2px 5px; margin: 0 12px 0 0;}
-#newsletter .email-input-container input { width: 173px; height: 18px; border: none; background: none; outline: none; font-family: "HelveticaNeueRegular", Arial, Helvetica, sans-serif; font-size: 11px; color: #666666;}
-#newsletter #subscribe { background:url(../images/subscribe-btn.png) no-repeat; width: 61px; height: 27px; border: none; outline: none;}
-#newsletter #subscribe:hover, #newsletter #subscribe:focus { cursor: pointer; opacity: 0.8;  }
-
 /**  columns-features  **/
 #support-features #columns-features { float: left; overflow: hidden; margin-left: 70px; margin: 20px 0 10px 0;   }
 
