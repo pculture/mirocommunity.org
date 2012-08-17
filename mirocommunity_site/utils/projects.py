@@ -56,7 +56,7 @@ def _mysql_database_name(site_name):
     namespace = getattr(settings, 'SITE_CREATION_NAMESPACE', '')
     prefix = '{0}_'.format(namespace) if namespace else ''
     return '{prefix}miro_community_{site_name}'.format(
-                    prefix=prefix, site_name=site_name)
+                    prefix=prefix, site_name=site_name.replace('-', '_'))
 
 
 def _run_mysql_command(command, **kwargs):
@@ -82,7 +82,8 @@ def create_mysql_database(database_name):
     :param database_name: The name of the database being created.
 
     """
-    _run_mysql_command('CREATE DATABASE `{0}`'.format(database_name))
+    _run_mysql_command('CREATE DATABASE `{0}`'
+                       'COLLATE utf8_general_ci'.format(database_name))
 
 
 def syncdb(site_name):
