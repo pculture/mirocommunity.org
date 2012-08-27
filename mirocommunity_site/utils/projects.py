@@ -2,6 +2,7 @@
 
 import logging
 import os
+import shutil
 import subprocess
 import sys
 
@@ -38,14 +39,16 @@ def create_project(site_name):
         logging.error("{0} already exists in {1}".format(project_name,
                                                          project_root))
         raise ValueError
-    os.mkdir(project_dir)
 
-    options = {}
     template_path = getattr(settings, 'SITE_CREATION_TEMPLATE', None)
-    if template_path is not None:
-        options['template'] = template_path
 
-    call_command('startproject', project_name, project_dir, **options)
+    if template_path is None:
+        os.mkdir(project_dir)
+        call_command('startproject', project_name, project_dir)
+    else:
+        shutil.copytree(settings.SITE_CREATION_TEMPLATE,
+                        project_dir,
+                        symlinks=True)
 
 
 def _mysql_database_name(site_name):
