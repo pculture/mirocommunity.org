@@ -18,7 +18,7 @@
 from django.conf.urls.defaults import url, patterns
 from django.views.generic import TemplateView
 
-from mirocommunity_site.views import SiteCreationView, PricingView
+from mirocommunity_site.views import SiteCreationView, PricingView, facebook_connect
 
 
 urlpatterns = patterns("",
@@ -31,6 +31,7 @@ urlpatterns = patterns("",
     url(r'^pricing/$',
         PricingView.as_view(template_name='mirocommunity_site/pricing.html'),
         name='mirocommunity_site_pricing'),
+    url(r'^facebook/connect/$', facebook_connect),
 
     url(r'^local-media/$',
         TemplateView.as_view(template_name='mirocommunity_site/local-media.html')),

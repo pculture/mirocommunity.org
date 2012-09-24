@@ -1,6 +1,6 @@
 from __future__ import with_statement
 
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, Http404
 from django.views.generic import FormView, TemplateView
 from mirocommunity_saas.models import Tier
 
@@ -39,3 +39,21 @@ class PricingView(TemplateView):
                                                          'max']
                                       ).order_by('price')
         return context
+
+
+def facebook_connect(request):
+    next = request.GET.get('next')
+    code = request.GET.get('code')
+    if not next:
+        raise Http404
+
+    if not code:
+        return HttpResponseRedirect(next)
+
+    netloc = urlparse.urlparse(next).netloc
+    format_str = 'http://{netloc}/accounts/facebook_login/done/?code={code}&next={next}'
+
+    return HttpResponseRedirect(format_str.format(
+            netloc=netloc,
+            code=urllib.quote_plus(code),
+            next=urllib.quote_plus(next)))
