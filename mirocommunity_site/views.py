@@ -1,5 +1,7 @@
 from __future__ import with_statement
 
+import urlparse
+
 from django.http import HttpResponseRedirect, Http404
 from django.views.generic import FormView, TemplateView
 from mirocommunity_saas.models import Tier
