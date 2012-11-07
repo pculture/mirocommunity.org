@@ -1,6 +1,5 @@
 from __future__ import with_statement
 import os
-import subprocess
 
 from django import forms
 from django.conf import settings
