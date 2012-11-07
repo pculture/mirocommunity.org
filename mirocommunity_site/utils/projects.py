@@ -146,4 +146,4 @@ def initialize(site_name, username='', email='', password='',
     env = os.environ.copy()
     env['PYTHONPATH'] = settings.SITE_CREATION_ROOT
     output = check_output(cmdline, env=env)
-    return output.rsplit('\n', 1)[1]
+    return output.rsplit('\n', 1)[-1]
