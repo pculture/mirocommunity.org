@@ -5,15 +5,8 @@ from django import forms
 from django.conf import settings
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
+from mirocommunity_hosting.projects import Project
 from mirocommunity_saas.models import Tier
-
-from mirocommunity_site.utils.projects import (create_project,
-                                               _project_name,
-                                               _mysql_database_name,
-                                               create_mysql_database,
-                                               syncdb,
-                                               initialize)
-from mirocommunity_site.signals import post_creation
 
 
 class TierChoiceField(forms.models.ModelChoiceField):
@@ -63,33 +56,28 @@ class SiteCreationForm(forms.ModelForm):
         site_name = self.cleaned_data['site_name']
         if os.path.exists(os.path.join(
             settings.SITE_CREATION_ROOT,
-            _project_name(site_name))):
+            self._project_name(site_name))):
             raise forms.ValidationError('A site already exists with that name.')
         return site_name
 
+    def _project_name(self, site_name):
+        return site_name.replace('-', '_') + '_project'
+
     def save(self):
         site_name = self.cleaned_data['site_name']
-        create_project(site_name)
+        project_name = self._project_name(site_name)
+        namespace = settings.MC_NAMESPACE
+        domain = "{site_name}.{namespace}{dot}mirocommunity.org".format(
+                 site_name=site_name, namespace=namespace,
+                 dot='.' if namespace else '')
+        project = Project.create(project_name, domain,
+                                 'project_base_1_10_project')
 
-        default_db = settings.DATABASES['default']
-        if default_db['ENGINE'] == 'django.db.backends.sqlite3':
-            pass
-        elif default_db['ENGINE'] == 'django.db.backends.mysql':
-            database_name = _mysql_database_name(site_name)
-            create_mysql_database(database_name)
-        else:
-            raise ValueError("Unhandled database.")
-
-        syncdb(site_name)
-
-        redirect = initialize(site_name,
-                              username=self.cleaned_data['username'],
-                              email=self.cleaned_data['email'],
-                              password=self.cleaned_data['password1'],
-                              tier=self.cleaned_data['tier'].slug)
-
-        # At this point, the site is initialized; we send a post-creation
-        # signal so that you can hook into this process.
-        post_creation.send(sender=self, site_name=site_name)
+        output = project.manage('initialize', site_name, domain,
+                                '--username=' + self.cleaned_data['username'],
+                                '--email=' + self.cleaned_data['email'],
+                                '--password=' + self.cleaned_data['password1'],
+                                '--tier=' + self.cleaned_data['tier'].slug)
+        redirect = output.rsplit('\n', 1)[-1]
 
         return redirect
