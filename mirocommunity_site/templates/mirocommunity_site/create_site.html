@@ -1,5 +1,7 @@
 {% extends "mirocommunity_site/__base.html" %}
 
+{% load staticfiles %}
+
 {% block content-inner %}
 <h1>Create a site</h1>
 
@@ -66,3 +68,8 @@
   {% endwith %}
 {% endblock %}
 
+
+{% block foot-scripts %}
+  {{ block.super }}
+  <script src="{% static 'mirocommunity_site/js/creation.js' %}"></script>
+{% endblock %}

@@ -1,7 +1,7 @@
 /* Welcome to Compass. In this file you should write your main styles. (or centralize your imports) Import this file using the following HTML or equivalent: <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
 
-body { line-height: 1; }
+html { line-height: 1; }
 
 ol, ul { list-style: none; }
 
@@ -107,43 +107,40 @@ header .logo { position: absolute; left: 10px; top: 30px; }
 .nav > li.accent > a:hover, .nav > li.accent > a:focus { opacity: 0.8; }
 .nav > li.accent > a:hover, .nav > li.accent > a:focus, .nav > li.accent > a.active { text-decoration: none; }
 
-.create-site-btn { position: absolute; top: 40px; right: 10px; }
-
-.create-site-btn:hover, .create-site-btn:focus { opacity: 0.8; }
-
 /** main  **/
 .main { background: url(../images/banner-bg.png) repeat-x top left; min-width: 990px; min-height: 425px; overflow: hidden; position: relative; }
 .main:before { background: url(../images/banner-bg-light.jpg) no-repeat top center; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 408px; content: ""; }
-.main h1 { font-family: "GothamThinRegular", Arial, Helvetica, sans-serif; font-size: 60px; font-weight: normal; color: #d62622; line-height: 60px; text-align: center; margin-bottom: 30px; text-shadow: 0px 1px 1px #777777; }
-.main h2 { font-family: "MuseoSlab500", Arial, Helvetica, sans-serif; font-size: 30px; font-weight: normal; line-height: 30px; margin-bottom: 30px; }
-.main h2.accent { color: #d62622; }
-.main h2.icon { padding-left: 30px; position: relative; }
-.main h2.icon-wide { padding-left: 45px; position: relative; }
-.main h2.icon-tools { background: url(../images/icons/tools.png) no-repeat left 1px; }
-.main h2.icon-heart { background: url(../images/icons/heart.png) no-repeat left center; }
-.main h2.icon-businessmen:before { display: block; content: ""; position: absolute; height: 38px; width: 33px; top: -8px; left: 0; background: url(../images/icons/businessmen.png) no-repeat left 1px; }
-.main h2.icon-monitor { background: url(../images/icons/monitor.png) no-repeat left center; }
-.main h2.icon-www { background: url(../images/icons/www.png) no-repeat left 1px; }
-.main h3 { font-family: "MuseoSlab500", Arial, Helvetica, sans-serif; font-size: 18px; color: #333333; font-weight: normal; margin-bottom: 14px; }
-.main h3.icon { padding-left: 30px; position: relative; }
-.main h3.icon-house { background: url(../images/icons/house.png) no-repeat left top; }
-.main h3.icon-parthenon { background: url(../images/icons/parthenon.png) no-repeat left top; }
-.main h3.icon-trophy { background: url(../images/icons/trophy.png) no-repeat left top; }
-.main h3.icon-movie-reel { background: url(../images/icons/movie-reel.png) no-repeat left top; }
-.main p, .main ul, .main ol, .main dl, .main blockquote, .main label, .main input, .main select, .main button, .main span { color: #333333; font-size: 14px; font-family: Helvetica, Tahoma, Arial, Geneva, sans-serif; line-height: 24px; margin-bottom: 14px; }
-.main ul { list-style: square outside; }
-.main ol { list-style: decimal outside; }
-.main a { color: #43B3EE; text-decoration: none; }
-.main a:hover { text-decoration: underline; }
-.main a.wrapping { text-decoration: none; }
-.main em { font-style: italic; }
-.main strong { font-weight: bold; }
+
+.main h1, .creation-message h1 { font-family: "GothamThinRegular", Arial, Helvetica, sans-serif; font-size: 60px; font-weight: normal; color: #d62622; line-height: 60px; text-align: center; margin-bottom: 30px; text-shadow: 0px 1px 1px #777777; }
+.main h2, .creation-message h2 { font-family: "MuseoSlab500", Arial, Helvetica, sans-serif; font-size: 30px; font-weight: normal; line-height: 30px; margin-bottom: 30px; }
+.main h2.accent, .creation-message h2.accent { color: #d62622; }
+.main h2.icon, .creation-message h2.icon { padding-left: 30px; position: relative; }
+.main h2.icon-wide, .creation-message h2.icon-wide { padding-left: 45px; position: relative; }
+.main h2.icon-tools, .creation-message h2.icon-tools { background: url(../images/icons/tools.png) no-repeat left 1px; }
+.main h2.icon-heart, .creation-message h2.icon-heart { background: url(../images/icons/heart.png) no-repeat left center; }
+.main h2.icon-businessmen:before, .creation-message h2.icon-businessmen:before { display: block; content: ""; position: absolute; height: 38px; width: 33px; top: -8px; left: 0; background: url(../images/icons/businessmen.png) no-repeat left 1px; }
+.main h2.icon-monitor, .creation-message h2.icon-monitor { background: url(../images/icons/monitor.png) no-repeat left center; }
+.main h2.icon-www, .creation-message h2.icon-www { background: url(../images/icons/www.png) no-repeat left 1px; }
+.main h3, .creation-message h3 { font-family: "MuseoSlab500", Arial, Helvetica, sans-serif; font-size: 18px; color: #333333; font-weight: normal; margin-bottom: 14px; }
+.main h3.icon, .creation-message h3.icon { padding-left: 30px; position: relative; }
+.main h3.icon-house, .creation-message h3.icon-house { background: url(../images/icons/house.png) no-repeat left top; }
+.main h3.icon-parthenon, .creation-message h3.icon-parthenon { background: url(../images/icons/parthenon.png) no-repeat left top; }
+.main h3.icon-trophy, .creation-message h3.icon-trophy { background: url(../images/icons/trophy.png) no-repeat left top; }
+.main h3.icon-movie-reel, .creation-message h3.icon-movie-reel { background: url(../images/icons/movie-reel.png) no-repeat left top; }
+.main p, .main ul, .main ol, .main dl, .main blockquote, .main label, .main input, .main select, .main button, .main span, .creation-message p, .creation-message ul, .creation-message ol, .creation-message dl, .creation-message blockquote, .creation-message label, .creation-message input, .creation-message select, .creation-message button, .creation-message span { color: #333333; font-size: 14px; font-family: Helvetica, Tahoma, Arial, Geneva, sans-serif; line-height: 24px; margin-bottom: 14px; }
+.main ul, .creation-message ul { list-style: square outside; }
+.main ol, .creation-message ol { list-style: decimal outside; }
+.main a, .creation-message a { color: #43B3EE; text-decoration: none; }
+.main a:hover, .creation-message a:hover { text-decoration: underline; }
+.main a.wrapping, .creation-message a.wrapping { text-decoration: none; }
+.main em, .creation-message em { font-style: italic; }
+.main strong, .creation-message strong { font-weight: bold; }
 
 .field-help-text { font-size: .9em; padding-left: 14px; font-style: italic; }
 
 figcaption { text-align: center; }
 
-.framed { border: 1px solid #C8CACE; background: #E9ECEE; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; -webkit-box-shadow: inset 0 0 0 2px white; -moz-box-shadow: inset 0 0 0 2px white; box-shadow: inset 0 0 0 2px white; padding: 2px; margin-bottom: 18px; }
+.framed { border: 1px solid #c8cace; background: #E9ECEE; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; -webkit-box-shadow: inset 0 0 0 2px white; -moz-box-shadow: inset 0 0 0 2px white; box-shadow: inset 0 0 0 2px white; padding: 2px; margin-bottom: 18px; }
 .framed > img { display: block; margin: 0 auto; }
 
 .taped { position: relative; margin: 14px 0 54px; height: 180px; }
@@ -152,7 +149,7 @@ figcaption { text-align: center; }
 
 /**  banner **/
 .banner { position: relative; }
-.banner > h1 { font-family: "GothamBookRegular",Arial, Helvetica, sans-serif; font-size: 48px; font-weight: normal; color: #fefefe; text-shadow: 2px 2px 13px black; text-align: center; margin: 14px 0; }
+.banner > h1 { font-family: "GothamBookRegular", Arial, Helvetica, sans-serif; font-size: 48px; font-weight: normal; color: #fefefe; text-shadow: 2px 2px 13px black; text-align: center; margin: 14px 0; }
 .banner > img { display: block; margin: 0 auto; }
 
 .banner-shadow { margin-bottom: 18px; overflow: hidden; height: 425px; }
@@ -165,6 +162,13 @@ figcaption { text-align: center; }
 .signup-now { float: right; margin: 0 40px 0 0; }
 
 .create-your-site:hover, .create-your-site:focus, .learn-more-btn:hover, .learn-more-btn:focus, .host-btn:hover, .host-btn:focus, .try-btn:hover, .try-btn:focus, .signup-now:hover, .signup-now:focus { opacity: 0.8; }
+
+.creation-overlay { position: absolute; top: 0; left: 0; padding-top: 60px; width: 100%; height: 100%; background: #fff; }
+
+.creation-message { position: fixed; width: 100%; text-align: center; }
+
+.creation-ball { width: 16px; height: 16px; background-image: url("../images/ball.gif"); display: inline-block; }
+.creation-ball.red { background-image: url("../images/ball-red.gif"); }
 
 /**  support-wrap  **/
 #support-wrap { min-width: 990px; background: #f4f4f4; border-top: 1px solid #d4d4d4; border-bottom: 1px solid #d4d4d4; }
@@ -195,7 +199,7 @@ figcaption { text-align: center; }
 
 #columns-features .column h3 { margin-bottom: 12px; }
 
-#columns-features .column ul li a { font-family: "HelveticaNeuemMedium" ,Arial, Helvetica, sans-serif; font-size: 10px; font-weight: normal; color: #666666; line-height: 25px; text-decoration: none; }
+#columns-features .column ul li a { font-family: "HelveticaNeuemMedium", Arial, Helvetica, sans-serif; font-size: 10px; font-weight: normal; color: #666666; line-height: 25px; text-decoration: none; }
 
 #columns-features .column ul li a:hover, #columns-features .column ul li a:focus { text-decoration: underline; }
 
@@ -211,7 +215,7 @@ figcaption { text-align: center; }
 
 #footer .footer-nav li { float: left; background: url(../images/divider.png) no-repeat right center; }
 
-#footer .footer-nav li a { font-family: "HelveticaNeueRegular",Arial, Helvetica, sans-serif; font-size: 12px; color: #55a4f2; padding: 0 15px 0 15px; line-height: 21px; text-decoration: none; }
+#footer .footer-nav li a { font-family: "HelveticaNeueRegular", Arial, Helvetica, sans-serif; font-size: 12px; color: #55a4f2; padding: 0 15px 0 15px; line-height: 21px; text-decoration: none; }
 
 #footer .footer-nav li a:hover, #footer .footer-nav li a:focus { text-decoration: underline; }
 

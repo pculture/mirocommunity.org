@@ -102,9 +102,6 @@ header {
 		}
 	}
 
-	.create-site-btn{ position: absolute; top: 40px; right: 10px;}
-	.create-site-btn:hover, .create-site-btn:focus{ opacity: 0.8; }
-
 /** main  **/
 .main {
 	background: url(../images/banner-bg.png) repeat-x top left;
@@ -123,7 +120,8 @@ header {
 		height: 408px;
 		content: "";
 	}
-
+}
+.main, .creation-message {
 	h1{
 		font-family: "GothamThinRegular", Arial, Helvetica, sans-serif;
 		font-size: $huge;
@@ -334,6 +332,34 @@ figure {}
 
 .create-your-site, .learn-more-btn, .host-btn, .try-btn, .signup-now{
 	&:hover, &:focus{opacity: 0.8;}
+}
+
+.creation-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding-top: $huge;
+
+	width: 100%;
+	height: 100%;
+	background: #fff;
+}
+
+.creation-message {
+	position: fixed;
+	width: 100%;
+	text-align: center;
+}
+
+.creation-ball {
+	width: 16px;
+	height: 16px;
+	background-image: url('../images/ball.gif');
+	display: inline-block;
+
+	&.red{
+		background-image: url('../images/ball-red.gif');
+	}
 }
 
 /**  support-wrap  **/
