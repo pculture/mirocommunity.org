@@ -66,12 +66,14 @@ class SiteCreationForm(forms.ModelForm):
     def save(self):
         site_name = self.cleaned_data['site_name']
         project_name = self._project_name(site_name)
-        namespace = settings.MC_NAMESPACE
+        namespace = getattr(settings, 'MC_NAMESPACE', None)
         domain = "{site_name}.{namespace}{dot}mirocommunity.org".format(
                  site_name=site_name, namespace=namespace,
                  dot='.' if namespace else '')
         project = Project.create(project_name, domain,
-                                 'project_base_1_10_project')
+                                 'project_base_1_10_project',
+                                 settings.SITE_CREATION_ROOT,
+                                 settings.SYMLINK_ROOT)
 
         output = project.manage('initialize', site_name, domain,
                                 '--username=' + self.cleaned_data['username'],

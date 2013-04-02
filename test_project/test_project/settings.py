@@ -1,6 +1,7 @@
 # Settings for testing mirocommunity.org
 
 import os
+import sys
 
 _PROJECT_DIR = os.path.dirname(__file__)
 
@@ -164,7 +165,9 @@ LOGGING = {
     }
 }
 
-SITE_CREATION_DIR = os.path.join(_PROJECT_DIR, 'projects')
+SITE_CREATION_ROOT = os.path.join(_PROJECT_DIR, 'projects')
+sys.path.append(SITE_CREATION_ROOT)
+SYMLINK_ROOT = os.path.join(_PROJECT_DIR, 'symlinks')
 PAYPAL_TEST = True
 
 # Not actually used, but required to be set.
