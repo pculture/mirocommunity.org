@@ -1,3 +1,0 @@
-django==1.4
--e git+git://github.com/pculture/mirocommunity.org.git@master#egg=mirocommunity.org
--e git+git://github.com/pculture/mirocommunity-saas.git@tiers_refactor#egg=mirocommunity-saas
