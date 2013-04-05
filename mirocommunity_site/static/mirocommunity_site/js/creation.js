@@ -1,6 +1,19 @@
 ;jQuery(function($){
-    $("<div class='creation-ball'></div>");
-    $("<div class='creation-ball red'></div>");
+    function precacheBackgroundImage(classes){
+        var obj = $("<div class='" + classes + "'></div>"),
+            backgroundImage = obj.css('background-image');
+        // ^ Either "none" or url("...urlhere..")
+        var imageURL = backgroundImage.match(/^url\(['"](.+)["']\)$/);
+        // If matched, retrieve url, otherwise ""
+        imageURL = imageURL ? imageURL[1] : "";
+        if (imageURL != "") {
+            var img = new Image();
+            img.src = imageURL;
+        }
+    }
+    precacheBackgroundImage('creation-ball');
+    precacheBackgroundImage('creation-ball red');
+
     $('form').submit(function(e){
         var div = $('<div class="creation-overlay"></div>'),
             message = $("<div class='creation-message'><h1>Your site is being created</h1><h2>This may take a minute. Please don't close your browser.</h2></div>");
