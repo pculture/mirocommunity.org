@@ -16,31 +16,33 @@
 # along with Miro Community.  If not, see <http://www.gnu.org/licenses/>.
 
 from django.conf.urls.defaults import url, patterns
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, RedirectView
 
-from mirocommunity_site.views import SiteCreationView, PricingView, facebook_connect
+from mirocommunity_site.views import SiteCreationView, facebook_connect
 
 
 urlpatterns = patterns("",
     url(r'^$',
         TemplateView.as_view(template_name='mirocommunity_site/index.html'),
         name='mirocommunity_site_index'),
-    url(r'^create/$',
-        SiteCreationView.as_view(template_name='mirocommunity_site/create_site.html'),
-        name='mirocommunity_site_create'),
+    #url(r'^create/$',
+    #    SiteCreationView.as_view(template_name='mirocommunity_site/create_site.html'),
+    #    name='mirocommunity_site_create'),
     url(r'^pricing/$',
-        PricingView.as_view(template_name='mirocommunity_site/pricing.html'),
+        RedirectView.as_view(
+            permanent=False,
+            url="https://github.com/pculture/mirocommunity"),
         name='mirocommunity_site_pricing'),
     url(r'^facebook/connect/$', facebook_connect),
 
-    url(r'^local-media/$',
-        TemplateView.as_view(template_name='mirocommunity_site/local-media.html')),
+    #url(r'^local-media/$',
+    #    TemplateView.as_view(template_name='mirocommunity_site/local-media.html')),
     url(r'^features/$',
         TemplateView.as_view(template_name='mirocommunity_site/features.html')),
-    url(r'^college/$',
-        TemplateView.as_view(template_name='mirocommunity_site/college.html')),
-    url(r'^enterprise/$',
-        TemplateView.as_view(template_name='mirocommunity_site/enterprise.html')),
+    #url(r'^college/$',
+    #    TemplateView.as_view(template_name='mirocommunity_site/college.html')),
+    #url(r'^enterprise/$',
+    #    TemplateView.as_view(template_name='mirocommunity_site/enterprise.html')),
     url(r'^terms/$',
         TemplateView.as_view(template_name='mirocommunity_site/terms.html')),
     url(r'^about/$',

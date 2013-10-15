@@ -3,8 +3,5 @@
 
 <ul class="nav">
 	<li>{% with url="/features/" text="Features" %}{% include "mirocommunity_site/_nav_link.html" %}{% endwith %}</li>
-	<li>{% with url="/college/" text="Universities" %}{% include "mirocommunity_site/_nav_link.html" %}{% endwith %}</li>
-	<li>{% with url="/local-media/" text="Local Media" %}{% include "mirocommunity_site/_nav_link.html" %}{% endwith %}</li>
-	<li>{% with url="/enterprise/" text="Enterprise Services" %}{% include "mirocommunity_site/_nav_link.html" %}{% endwith %}</li>
-	<li class='accent'>{% url 'mirocommunity_site_pricing' as url %}{% with text="Pricing" %}{% include "mirocommunity_site/_nav_link.html" %}{% endwith %}</li>
+	<li class='accent'>{% with text="Open Source" url="https://github.com/pculture/mirocommunity" %}{% include "mirocommunity_site/_nav_link.html" %}{% endwith %}</li>
 </ul>
