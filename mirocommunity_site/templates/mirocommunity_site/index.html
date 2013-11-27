@@ -3,18 +3,10 @@
 
 {% block title %}{{ block.super }}: The easiest way to create a video site or contest{% endblock %}
 
-{% block pre-content %}
-	<figure class="banner">
-		<h1>The easiest way to make a video website</h1>
-		<img src="{% static 'mirocommunity_site/images/content/index/banner.png' %}">
-	</figure>
-{% endblock %}
+{% block content-inner %}
+	<h1>The easiest way to make a video website</h1>
 
-{% block content %}
-<div class='l-section'>
-	<h1>What makes miro community so powerful?</h1>
-
-	<div class='l-thirds-wide l-section'>
+	<div class='l-thirds l-section'>
 		<div>
 			<figure class='framed'>
 				<img src="{% static 'mirocommunity_site/images/content/index/setup.png' %}">
@@ -37,7 +29,7 @@
 			<p>Review incoming videos, accept user submissions, and tag videos to fit your needs. There's no faster way to manage a video site - requires very little staff time to reach a high quality level.</p>
 		</div>	
 	</div>
-	<div class='l-quarters-wide l-section'>
+	<div class='l-quarters l-section'>
 		<div>
 			<h3 class='icon icon-house'>Local communities</h3>
 			<p>Create connections between producers and nearby audiences.</p>
@@ -57,21 +49,11 @@
 	</div>
 
 	<div class="l-bordered-box">
-	<div class="l-quarters-wide">
+	<div class="l-thirds">
 		<div>
 			<h2 class='accent'>Featured Sites</h2>
 			<p>Miro Community sites run the gamut: universities, local communities, and more.</p>
 			<p><a href="https://github.com/pculture/mirocommunity">Get the code</a></p>
-		</div>
-		<div>
-			<a class="wrapping" href="http://skiddplayer.com/">
-				<figure>
-					<div class='framed'>
-						<img src="{% static 'mirocommunity_site/images/gal_1.jpg' %}">
-					</div>
-					<figcaption><h3>SkiddPlayer</h3></figcaption>
-				</figure>
-			</a>
 		</div>
 		<div>
 			<a class="wrapping" href="http://whyopenedmatters.org/">
