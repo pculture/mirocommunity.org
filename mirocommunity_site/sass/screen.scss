@@ -253,10 +253,12 @@ figure {}
 		@include box-shadow(inset 0 0 0 2px #fff);
 		padding: 2px;
 		margin-bottom: $large;
+		@include box-sizing(border-box);
 
 		& > img{
 			display: block;
 			margin: 0 auto;
+			width: 100%;
 		}
 	}
 
